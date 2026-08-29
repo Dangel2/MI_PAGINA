@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Engel ?? Maricela</title>
+
+  <meta
+    name="description"
+    content="Nuestra historia, nuestro amor y todo lo que estamos construyendo juntos."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: #120b0e;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       PANTALLA DE INICIO
+    ========================= */
+
+    .intro {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background:
+        radial-gradient(circle at center, rgba(255, 105, 135, .15), transparent 45%),
+        #120b0e;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        opacity 1s ease,
+        visibility 1s ease;
+    }
+
+    .intro.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .intro-content {
+      text-align: center;
+      padding: 30px;
+      animation: introAppear 1.5s ease;
+    }
+
+    .intro-heart {
+      font-size: 70px;
+      animation: heartbeat 1.5s infinite;
+      margin-bottom: 20px;
+    }
+
+    .intro h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: clamp(45px, 10vw, 90px);
+      color: #ffd1dc;
+    }
+
+    .intro p {
+      margin: 10px 0 30px;
+      color: #d8bfc6;
+      font-size: 14px;
+    }
+
+    .enter-btn {
+      border: none;
+      padding: 14px 30px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ff5277, #ff8fa8);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(255, 82, 119, .3);
+      transition: .3s;
+    }
+
+    .enter-btn:hover {
+      transform: scale(1.06);
+    }
+
+    /* =========================
+       FONDO
+    ========================= */
+
+    .background-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 91, 130, .12), transparent 30%),
+        radial-gradient(circle at 80% 60%, rgba(255, 174, 74, .08), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(255, 70, 100, .08), transparent 40%);
+    }
+
+    /* =========================
+       PARTICULAS
+    ========================= */
+
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      font-size: 16px;
+      opacity: .5;
+      animation: floatUp linear infinite;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 40px 20px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(18, 11, 14, .6),
+          rgba(18, 11, 14, .9)
+        );
+    }
+
+    .hero-content {
+      max-width: 900px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-title {
+      color: #ff9bb0;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: clamp(65px, 13vw, 150px);
+      line-height: .9;
+      color: #fff0f4;
+      text-shadow: 0 0 40px rgba(255, 94, 130, .25);
+    }
+
+    .hero h1 span {
+      color: #ff718e;
+    }
+
+    .hero-subtitle {
+      margin-top: 30px;
+      font-size: clamp(15px, 3vw, 21px);
+      color: #d8c4ca;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      color: #e9ccd3;
+      font-size: 12px;
+      letter-spacing: 2px;
+
+      animation: bounce 2s infinite;
+    }
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    section {
+      padding: 100px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-container {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      display: block;
+      color: #ff829d;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    .section-title h2 {
+      font-family: "Dancing Script", cursive;
+      font-size: clamp(45px, 8vw, 75px);
+      font-weight: 600;
+    }
+
+    /* =========================
+       HISTORIA
+    ========================= */
+
+    .story {
+      background: rgba(255,255,255,.015);
+    }
+
+    .story-card {
+      padding: 50px 30px;
+      border-radius: 30px;
+
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.07);
+
+      box-shadow: 0 25px 70px rgba(0,0,0,.2);
+
+      text-align: center;
+    }
+
+    .story-date {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 30px;
+
+      background: rgba(255, 99, 132, .1);
+      color: #ff91a8;
+
+      font-size: 12px;
+      letter-spacing: 1px;
+
+      margin-bottom: 30px;
+    }
+
+    .story-card p {
+      max-width: 750px;
+      margin: auto;
+
+      color: #d9c8cd;
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .story-card p + p {
+      margin-top: 25px;
+    }
+
+    .highlight {
+      color: #ff9eb2;
+      font-weight: 600;
+    }
+
+    /* =========================
+       CONEXION
+    ========================= */
+
+    .connection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .connection-card {
+      padding: 35px 25px;
+      text-align: center;
+
+      border-radius: 25px;
+
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.06);
+
+      transition: .4s;
+    }
+
+    .connection-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 113, 142, .35);
+    }
+
+    .connection-icon {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .connection-card h3 {
+      margin-bottom: 12px;
+      font-family: "Dancing Script", cursive;
+      font-size: 29px;
+    }
+
+    .connection-card p {
+      color: #bcaeb3;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       GALERIA
+    ========================= */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .photo {
+      aspect-ratio: 1 / 1;
+      border-radius: 20px;
+      overflow: hidden;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,113,142,.1),
+          rgba(255,193,100,.05)
+        );
+
+      border: 1px dashed rgba(255,255,255,.15);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+      transition: .4s;
+    }
+
+    .photo:hover {
+      transform: scale(1.02);
+      border-color: rgba(255,113,142,.5);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-placeholder {
+      text-align: center;
+      color: #987f87;
+      padding: 20px;
+    }
+
+    .photo-placeholder span {
+      display: block;
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    /* =========================
+       CARTA
+    ========================= */
+
+    .letter {
+      max-width: 800px;
+      margin: auto;
+
+      padding: 55px 40px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.06),
+          rgba(255,255,255,.025)
+        );
+
+      border: 1px solid rgba(255,255,255,.08);
+
+      border-radius: 30px;
+
+      box-shadow: 0 30px 80px rgba(0,0,0,.25);
+    }
+
+    .letter p {
+      color: #d9c8cd;
+      line-height: 2;
+      font-size: 16px;
+      margin-bottom: 22px;
+    }
+
+    .letter .opening {
+      font-family: "Dancing Script", cursive;
+      font-size: 35px;
+      color: #ff9db1;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+
+      font-family: "Dancing Script", cursive;
+      font-size: 35px;
+      color: #ff829d;
+    }
+
+    /* =========================
+       PROMESA
+    ========================= */
+
+    .promise {
+      text-align: center;
+    }
+
+    .promise-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .promise-text {
+      font-family: "Dancing Script", cursive;
+      font-size: clamp(38px, 7vw, 65px);
+      line-height: 1.25;
+      color: #ffe8ed;
+    }
+
+    .promise-text span {
+      color: #ff718e;
+    }
+
+    /* =========================
+       FINAL
+    ========================= */
+
+    .final {
+      min-height: 75vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .final-content {
+      max-width: 800px;
+    }
+
+    .final-heart {
+      font-size: 65px;
+      animation: heartbeat 1.5s infinite;
+      margin-bottom: 25px;
+    }
+
+    .final h2 {
+      font-family: "Dancing Script", cursive;
+      font-size: clamp(50px, 9vw, 90px);
+      line-height: 1;
+    }
+
+    .final p {
+      margin-top: 25px;
+      color: #bcaeb3;
+      line-height: 1.8;
+    }
+
+    .forever {
+      display: inline-block;
+      margin-top: 35px;
+
+      color: #ff8fa7;
+
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       REPRODUCTOR
+    ========================= */
+
+    .music-button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+
+      width: 55px;
+      height: 55px;
+
+      border: none;
+      border-radius: 50%;
+
+      background: rgba(255, 88, 120, .9);
+      color: white;
+
+      cursor: pointer;
+      z-index: 1000;
+
+      font-size: 20px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+      transition: .3s;
+    }
+
+    .music-button:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       CORAZONES
+    ========================= */
+
+    .floating-heart {
+      position: fixed;
+      bottom: -30px;
+      pointer-events: none;
+      z-index: 20;
+
+      animation: heartFloat linear forwards;
+    }
+
+    /* =========================
+       ANIMACIONES
+    ========================= */
+
+    @keyframes introAppear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+
+      50% {
+        transform: translate(-50%, -10px);
+      }
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(110vh) rotate(0deg);
+      }
+
+      to {
+        transform: translateY(-20vh) rotate(360deg);
+      }
+    }
+
+    @keyframes heartFloat {
+      from {
+        transform: translateY(0) scale(.5) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: .8;
+      }
+
+      to {
+        transform: translateY(-110vh) scale(1.3) rotate(25deg);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 750px) {
+
+      section {
+        padding: 75px 18px;
+      }
+
+      .connection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .letter {
+        padding: 35px 23px;
+      }
+
+      .letter p {
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 100svh;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .story-card {
+        padding: 35px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <div class="intro" id="intro">
+
+    <div class="intro-content">
+
+      <div class="intro-heart">??</div>
+
+      <h1>Engel & Maricela</h1>
+
+      <p>
+        Una historia que ninguno de los dos esperaba...
+      </p>
+
+      <button class="enter-btn" onclick="enterPage()">
+        Entrar a nuestra historia ??
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- FONDO -->
+
+  <div class="background-glow"></div>
+
+  <div class="particles" id="particles"></div>
+
+
+  <!-- =========================
+       MUSICA
+  ========================= -->
+
+  <audio id="music" loop>
+
+    <!--
+      COLOCA AQUÍ TU CANCIÓN.
+
+      Ejemplo:
+
+      <source src="musica.mp3" type="audio/mpeg">
+
+    -->
+
+  </audio>
+
+  <button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()"
+    aria-label="Reproducir música"
+  >
+    ??
+  </button>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="small-title">
+          Nuestra historia
+        </div>
+
+        <h1>
+          Engel
+          <span>?</span>
+          Maricela
+        </h1>
+
+        <p class="hero-subtitle">
+          Dos personas que se encontraron sin saber
+          que terminarían cambiándose la vida para siempre.
+        </p>
+
+      </div>
+
+      <div class="scroll-down">
+        DESLIZA ?
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HISTORIA
+    ========================= -->
+
+    <section class="story">
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>Donde comenzó todo</span>
+
+          <h2>Nuestra historia</h2>
+
+        </div>
+
+
+        <div class="story-card">
+
+          <div class="story-date">
+            ?? EL DÍA QUE TODO COMENZÓ
+          </div>
+
+
+          <p>
+
+            Hay encuentros que parecen casualidad,
+            pero con el tiempo uno entiende que
+            quizá estaban destinados a suceder.
+
+          </p>
+
+
+          <p>
+
+            Tú, <span class="highlight">Maricela</span>,
+            volviste a creer en el amor.
+
+            Y yo, <span class="highlight">Engel</span>,
+            encontré en ti algo que jamás pensé encontrar:
+
+            una persona capaz de entrar en mi vida,
+            conocer mis partes más oscuras
+            y ayudarme a encontrar nuevamente la luz.
+
+          </p>
+
+
+          <p>
+
+            Me ayudaste a dejar atrás los vicios,
+            a mirar hacia adelante y a entender
+            que mi vida podía tomar otro rumbo.
+
+          </p>
+
+
+          <p>
+
+            Y quizá lo más bonito de todo
+            es que ninguno de los dos sabe explicar
+            exactamente qué nos une.
+
+            Simplemente existe.
+
+            Esa conexión inexplicable que sentimos
+            cuando estamos juntos.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONEXION
+    ========================= -->
+
+    <section>
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>Lo que somos</span>
+
+          <h2>Una conexión diferente</h2>
+
+        </div>
+
+
+        <div class="connection-grid">
+
+          <div class="connection-card">
+
+            <div class="connection-icon">
+              ??
+            </div>
+
+            <h3>Amor</h3>
+
+            <p>
+              No es solamente decir "te amo".
+              Es elegirnos incluso en los días
+              en los que todo parece complicado.
+            </p>
+
+          </div>
+
+
+          <div class="connection-card">
+
+            <div class="connection-icon">
+              ??
+            </div>
+
+            <h3>Refugio</h3>
+
+            <p>
+              Encontrarnos el uno en el otro
+              y sentir que por un momento
+              el mundo deja de pesar.
+            </p>
+
+          </div>
+
+
+          <div class="connection-card">
+
+            <div class="connection-icon">
+              ?
+            </div>
+
+            <h3>Destino</h3>
+
+            <p>
+              Porque hay conexiones que no necesitan
+              explicación. Solo necesitan sentirse.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALERIA
+    ========================= -->
+
+    <section>
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>Nuestros recuerdos</span>
+
+          <h2>Momentos contigo</h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+          <!-- FOTO 1 -->
+
+          <div class="photo">
+
+            <!--
+              PARA PONER UNA FOTO:
+
+              Reemplaza el contenido por:
+
+              <img src="foto1.jpg" alt="Nuestro recuerdo">
+            -->
+
+            <div class="photo-placeholder">
+
+              <span>??</span>
+
+              <small>
+                Coloca aquí nuestra foto
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- FOTO 2 -->
+
+          <div class="photo">
+
+            <div class="photo-placeholder">
+
+              <span>??</span>
+
+              <small>
+                Nuestro recuerdo
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- FOTO 3 -->
+
+          <div class="photo">
+
+            <div class="photo-placeholder">
+
+              <span>??</span>
+
+              <small>
+                Un momento especial
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- FOTO 4 -->
+
+          <div class="photo">
+
+            <div class="photo-placeholder">
+
+              <span>??</span>
+
+              <small>
+                Ese momento
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- FOTO 5 -->
+
+          <div class="photo">
+
+            <div class="photo-placeholder">
+
+              <span>??</span>
+
+              <small>
+                Un recuerdo nuestro
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- FOTO 6 -->
+
+          <div class="photo">
+
+            <div class="photo-placeholder">
+
+              <span>??</span>
+
+              <small>
+                Para siempre
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CARTA
+    ========================= -->
+
+    <section>
+
+      <div class="section-container">
+
+        <div class="section-title">
+
+          <span>Para ti</span>
+
+          <h2>Maricela...</h2>
+
+        </div>
+
+
+        <div class="letter">
+
+          <p class="opening">
+            Mi amor...
+          </p>
+
+
+          <p>
+
+            Si algún día me preguntaran qué cambió
+            mi vida, probablemente hablaría de ti.
+
+          </p>
+
+
+          <p>
+
+            Porque llegaste a mi vida y, sin darte cuenta,
+            hiciste algo que quizá nunca imaginaste.
+
+            Me ayudaste a salir de una oscuridad
+            en la que llevaba demasiado tiempo.
+
+          </p>
+
+
+          <p>
+
+            Y mientras tú volvías a creer en el amor,
+            yo volvía a creer en mí.
+
+          </p>
+
+
+          <p>
+
+            No sé cómo explicar lo que existe entre nosotros.
+            No sé por qué contigo todo se siente diferente.
+
+            Solo sé que cuando estoy contigo,
+            existe una tranquilidad que no encuentro
+            en ningún otro lugar.
+
+          </p>
+
+
+          <p>
+
+            Te amo por quien eres,
+            por lo que hemos vivido,
+            por lo que hemos superado
+            y por todo aquello que todavía
+            nos falta vivir.
+
+          </p>
+
+
+          <p>
+
+            No quiero que nuestra historia sea perfecta.
+
+            Quiero que sea nuestra.
+
+            Con nuestras risas,
+            nuestras locuras,
+            nuestros momentos difíciles,
+            nuestros abrazos,
+            nuestras reconciliaciones
+            y todos esos pequeños momentos
+            que solamente nosotros entendemos.
+
+          </p>
+
+
+          <p>
+
+            Y si alguna vez dudas de cuánto significas para mí,
+            recuerda esto:
+
+            <span class="highlight">
+              tú no solamente llegaste a mi vida;
+              también cambiaste el rumbo de ella.
+            </span>
+
+          </p>
+
+
+          <div class="signature">
+
+            Con todo mi amor,
+
+            <br>
+
+            Engel ??
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROMESA
+    ========================= -->
+
+    <section class="promise">
+
+      <div class="promise-content">
+
+        <div class="section-title">
+
+          <span>Si pudiera pedir algo</span>
+
+          <h2>Mi deseo</h2>
+
+        </div>
+
+
+        <div class="promise-text">
+
+          Que nunca olvidemos
+
+          <span>
+            por qué comenzamos.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section class="final">
+
+      <div class="final-content">
+
+        <div class="final-heart">
+          ??
+        </div>
+
+
+        <h2>
+          Tú y yo.
+        </h2>
+
+
+        <p>
+
+          Quizá el mundo nos hizo encontrarnos
+          por casualidad.
+
+          Pero después de todo lo que hemos vivido,
+          yo prefiero pensar que fue el destino.
+
+        </p>
+
+
+        <p>
+
+          Y si pudiera regresar al momento
+          en que nuestras vidas se cruzaron...
+
+        </p>
+
+
+        <p class="highlight">
+
+          volvería a elegirte.
+
+        </p>
+
+
+        <div class="forever">
+
+          Engel & Maricela · Siempre nosotros
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    const intro = document.getElementById("intro");
+    const music = document.getElementById("music");
+    const musicButton = document.getElementById("musicButton");
+
+    let playing = false;
+
+
+    /*
+    ================================
+    ENTRAR A LA PÁGINA
+    ================================
+    */
+
+    function enterPage() {
+
+      intro.classList.add("hidden");
+
+      setTimeout(() => {
+
+        if (music) {
+
+          music.play()
+            .then(() => {
+
+              playing = true;
+              musicButton.textContent = "??";
+
+            })
+            .catch(() => {
+
+              playing = false;
+
+            });
+
+        }
+
+      }, 700);
+
+    }
+
+
+    /*
+    ================================
+    MUSICA
+    ================================
+    */
+
+    function toggleMusic() {
+
+      if (!music) return;
+
+      if (playing) {
+
+        music.pause();
+
+        musicButton.textContent = "??";
+
+        playing = false;
+
+      } else {
+
+        music.play()
+          .then(() => {
+
+            musicButton.textContent = "??";
+            playing = true;
+
+          })
+          .catch(() => {
+
+            alert("Primero coloca tu archivo de música en el código ??");
+
+          });
+
+      }
+
+    }
+
+
+    /*
+    ================================
+    PARTICULAS
+    ================================
+    */
+
+    const particles = document.getElementById("particles");
+
+    const symbols = [
+      "?",
+      "?",
+      "?",
+      "?",
+      "??"
+    ];
+
+
+    for (let i = 0; i < 25; i++) {
+
+      const particle = document.createElement("div");
+
+      particle.className = "particle";
+
+      particle.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+      particle.style.left =
+        Math.random() * 100 + "%";
+
+      particle.style.animationDuration =
+        (12 + Math.random() * 18) + "s";
+
+      particle.style.animationDelay =
+        (-Math.random() * 20) + "s";
+
+      particle.style.fontSize =
+        (10 + Math.random() * 16) + "px";
+
+      particles.appendChild(particle);
+
+    }
+
+
+    /*
+    ================================
+    CORAZONES AL HACER CLICK
+    ================================
+    */
+
+    document.addEventListener("click", function(e) {
+
+      if (
+        e.target.closest(".enter-btn") ||
+        e.target.closest(".music-button")
+      ) {
+        return;
+      }
+
+
+      createHeart(
+        e.clientX,
+        e.clientY
+      );
+
+    });
+
+
+    function createHeart(x, y) {
+
+      const heart = document.createElement("div");
+
+      heart.className = "floating-heart";
+
+      heart.textContent =
+        Math.random() > .3 ? "??" : "??";
+
+      heart.style.left =
+        x + "px";
+
+      heart.style.bottom =
+        (window.innerHeight - y) + "px";
+
+      heart.style.fontSize =
+        (12 + Math.random() * 18) + "px";
+
+      heart.style.animationDuration =
+        (2 + Math.random() * 2) + "s";
+
+      document.body.appendChild(heart);
+
+
+      setTimeout(() => {
+
+        heart.remove();
+
+      }, 4000);
+
+    }
+
+
+    /*
+    ================================
+    CORAZONES AUTOMATICOS
+    ================================
+    */
+
+    setInterval(() => {
+
+      const heart = document.createElement("div");
+
+      heart.className = "floating-heart";
+
+      heart.textContent =
+        Math.random() > .15 ? "??" : "??";
+
+      heart.style.left =
+        Math.random() * window.innerWidth + "px";
+
+      heart.style.fontSize =
+        (10 + Math.random() * 15) + "px";
+
+      heart.style.animationDuration =
+        (5 + Math.random() * 4) + "s";
+
+      document.body.appendChild(heart);
+
+
+      setTimeout(() => {
+
+        heart.remove();
+
+      }, 9000);
+
+    }, 1800);
+
+
+  </script>
+
+</body>
+</html>
