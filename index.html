@@ -1,25 +1,38 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Engel ?? Maricela</title>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Mi poeta favorito ❤️ Mi terroncito de azúcar</title>
 
   <meta
     name="description"
-    content="Nuestra historia, nuestro amor y todo lo que estamos construyendo juntos."
-  />
+    content="Una historia de amor que comenzó sin saber todo lo que llegaría a significar."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
-  />
+  >
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -33,80 +46,14 @@
     body {
       font-family: "Montserrat", sans-serif;
       background: #120b0e;
-      color: #fff;
+      color: white;
       overflow-x: hidden;
     }
 
-    /* =========================
-       PANTALLA DE INICIO
-    ========================= */
 
-    .intro {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background:
-        radial-gradient(circle at center, rgba(255, 105, 135, .15), transparent 45%),
-        #120b0e;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      transition:
-        opacity 1s ease,
-        visibility 1s ease;
-    }
-
-    .intro.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .intro-content {
-      text-align: center;
-      padding: 30px;
-      animation: introAppear 1.5s ease;
-    }
-
-    .intro-heart {
-      font-size: 70px;
-      animation: heartbeat 1.5s infinite;
-      margin-bottom: 20px;
-    }
-
-    .intro h1 {
-      font-family: "Dancing Script", cursive;
-      font-size: clamp(45px, 10vw, 90px);
-      color: #ffd1dc;
-    }
-
-    .intro p {
-      margin: 10px 0 30px;
-      color: #d8bfc6;
-      font-size: 14px;
-    }
-
-    .enter-btn {
-      border: none;
-      padding: 14px 30px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #ff5277, #ff8fa8);
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(255, 82, 119, .3);
-      transition: .3s;
-    }
-
-    .enter-btn:hover {
-      transform: scale(1.06);
-    }
-
-    /* =========================
+    /* =====================================
        FONDO
-    ========================= */
+    ===================================== */
 
     .background-glow {
       position: fixed;
@@ -115,39 +62,239 @@
       z-index: -2;
 
       background:
-        radial-gradient(circle at 20% 20%, rgba(255, 91, 130, .12), transparent 30%),
-        radial-gradient(circle at 80% 60%, rgba(255, 174, 74, .08), transparent 30%),
-        radial-gradient(circle at 50% 100%, rgba(255, 70, 100, .08), transparent 40%);
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255, 91, 130, .13),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 80% 60%,
+          rgba(255, 174, 74, .08),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 50% 100%,
+          rgba(255, 70, 100, .08),
+          transparent 40%
+        );
     }
 
-    /* =========================
-       PARTICULAS
-    ========================= */
 
-    .particles {
+    /* =====================================
+       INTRO
+    ===================================== */
+
+    .intro {
+
       position: fixed;
       inset: 0;
-      pointer-events: none;
-      z-index: 0;
-    }
 
-    .particle {
-      position: absolute;
-      font-size: 16px;
-      opacity: .5;
-      animation: floatUp linear infinite;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 100vh;
-      position: relative;
+      z-index: 9999;
 
       display: flex;
       align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(255, 105, 135, .15),
+          transparent 45%
+        ),
+
+        #120b0e;
+
+      transition:
+        opacity 1s ease,
+        visibility 1s ease;
+    }
+
+
+    .intro.hidden {
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      pointer-events: none;
+    }
+
+
+    .intro-content {
+
+      max-width: 700px;
+
+      padding: 30px;
+
+      animation: introAppear 1.5s ease;
+    }
+
+
+    .intro-heart {
+
+      font-size: 70px;
+
+      margin-bottom: 20px;
+
+      animation: heartbeat 1.5s infinite;
+    }
+
+
+    .intro h1 {
+
+      font-family: "Dancing Script", cursive;
+
+      font-size: clamp(
+        45px,
+        10vw,
+        85px
+      );
+
+      color: #ffd1dc;
+
+      line-height: 1;
+    }
+
+
+    .intro p {
+
+      margin-top: 20px;
+
+      color: #d8bfc6;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =====================================
+       BOTÓN DE MÚSICA INICIAL
+    ===================================== */
+
+    .music-start {
+
+      margin-top: 30px;
+
+      border: 1px solid rgba(
+        255,
+        255,
+        255,
+        .18
+      );
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 82, 119, .9),
+          rgba(178, 64, 95, .9)
+        );
+
+      color: white;
+
+      padding: 16px 27px;
+
+      border-radius: 50px;
+
+      cursor: pointer;
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      box-shadow:
+        0 10px 35px
+        rgba(255, 82, 119, .25);
+
+      transition: .35s;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+    }
+
+
+    .music-start:hover {
+
+      transform:
+        translateY(-3px)
+        scale(1.03);
+
+      box-shadow:
+        0 15px 40px
+        rgba(255, 82, 119, .4);
+    }
+
+
+    .music-start.playing {
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff718e,
+          #e24b6d
+        );
+    }
+
+
+    .music-icon {
+
+      font-size: 20px;
+
+      animation:
+        musicPulse 1.5s infinite;
+    }
+
+
+    /* =====================================
+       PARTICULAS
+    ===================================== */
+
+    .particles {
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      z-index: 0;
+    }
+
+
+    .particle {
+
+      position: absolute;
+
+      opacity: .45;
+
+      animation:
+        floatUp linear infinite;
+    }
+
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .hero {
+
+      min-height: 100vh;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
       justify-content: center;
 
       padding: 40px 20px;
@@ -156,202 +303,348 @@
 
       background:
         linear-gradient(
-          rgba(18, 11, 14, .6),
-          rgba(18, 11, 14, .9)
+          rgba(18, 11, 14, .55),
+          rgba(18, 11, 14, .92)
         );
     }
 
+
     .hero-content {
-      max-width: 900px;
+
+      max-width: 950px;
+
       position: relative;
+
       z-index: 2;
     }
 
+
     .small-title {
+
       color: #ff9bb0;
+
       letter-spacing: 4px;
+
       text-transform: uppercase;
-      font-size: 12px;
+
+      font-size: 11px;
+
       margin-bottom: 15px;
     }
 
+
     .hero h1 {
-      font-family: "Dancing Script", cursive;
-      font-size: clamp(65px, 13vw, 150px);
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size:
+        clamp(
+          55px,
+          12vw,
+          135px
+        );
+
       line-height: .9;
+
       color: #fff0f4;
-      text-shadow: 0 0 40px rgba(255, 94, 130, .25);
+
+      text-shadow:
+        0 0 40px
+        rgba(255, 94, 130, .25);
     }
 
+
     .hero h1 span {
+
       color: #ff718e;
     }
 
+
     .hero-subtitle {
+
       margin-top: 30px;
-      font-size: clamp(15px, 3vw, 21px);
+
+      font-size:
+        clamp(
+          14px,
+          3vw,
+          20px
+        );
+
       color: #d8c4ca;
+
       font-weight: 300;
+
       line-height: 1.8;
     }
 
+
     .scroll-down {
+
       position: absolute;
+
       bottom: 30px;
+
       left: 50%;
-      transform: translateX(-50%);
+
+      transform:
+        translateX(-50%);
 
       color: #e9ccd3;
-      font-size: 12px;
+
+      font-size: 11px;
+
       letter-spacing: 2px;
 
-      animation: bounce 2s infinite;
+      animation:
+        bounce 2s infinite;
     }
 
-    /* =========================
+
+    /* =====================================
        SECCIONES
-    ========================= */
+    ===================================== */
 
     section {
-      padding: 100px 20px;
+
+      padding:
+        100px 20px;
+
       position: relative;
+
       z-index: 1;
     }
 
+
     .section-container {
+
       max-width: 1050px;
+
       margin: auto;
     }
 
+
     .section-title {
+
       text-align: center;
+
       margin-bottom: 55px;
     }
 
+
     .section-title span {
+
       display: block;
+
       color: #ff829d;
+
       text-transform: uppercase;
-      font-size: 11px;
+
+      font-size: 10px;
+
       letter-spacing: 3px;
+
       margin-bottom: 10px;
     }
 
+
     .section-title h2 {
-      font-family: "Dancing Script", cursive;
-      font-size: clamp(45px, 8vw, 75px);
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size:
+        clamp(
+          43px,
+          8vw,
+          72px
+        );
+
       font-weight: 600;
     }
 
-    /* =========================
+
+    /* =====================================
        HISTORIA
-    ========================= */
+    ===================================== */
 
     .story {
-      background: rgba(255,255,255,.015);
+
+      background:
+        rgba(255,255,255,.015);
     }
 
+
     .story-card {
-      padding: 50px 30px;
+
+      padding:
+        50px 30px;
+
       border-radius: 30px;
 
-      background: rgba(255,255,255,.035);
-      border: 1px solid rgba(255,255,255,.07);
+      background:
+        rgba(255,255,255,.035);
 
-      box-shadow: 0 25px 70px rgba(0,0,0,.2);
+      border:
+        1px solid
+        rgba(255,255,255,.07);
+
+      box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.2);
 
       text-align: center;
     }
 
+
     .story-date {
+
       display: inline-block;
-      padding: 10px 18px;
+
+      padding:
+        10px 18px;
+
       border-radius: 30px;
 
-      background: rgba(255, 99, 132, .1);
+      background:
+        rgba(255, 99, 132, .1);
+
       color: #ff91a8;
 
-      font-size: 12px;
+      font-size: 11px;
+
       letter-spacing: 1px;
 
       margin-bottom: 30px;
     }
 
+
     .story-card p {
+
       max-width: 750px;
+
       margin: auto;
 
       color: #d9c8cd;
-      font-size: 16px;
+
+      font-size: 15px;
+
       line-height: 2;
     }
 
+
     .story-card p + p {
+
       margin-top: 25px;
     }
 
+
     .highlight {
+
       color: #ff9eb2;
+
       font-weight: 600;
     }
 
-    /* =========================
-       CONEXION
-    ========================= */
+
+    /* =====================================
+       CONEXIÓN
+    ===================================== */
 
     .connection-grid {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 20px;
     }
 
+
     .connection-card {
+
       padding: 35px 25px;
+
       text-align: center;
 
       border-radius: 25px;
 
-      background: rgba(255,255,255,.035);
-      border: 1px solid rgba(255,255,255,.06);
+      background:
+        rgba(255,255,255,.035);
+
+      border:
+        1px solid
+        rgba(255,255,255,.06);
 
       transition: .4s;
     }
 
+
     .connection-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 113, 142, .35);
+
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(255, 113, 142, .35);
     }
 
+
     .connection-icon {
+
       font-size: 38px;
+
       margin-bottom: 18px;
     }
 
+
     .connection-card h3 {
+
       margin-bottom: 12px;
-      font-family: "Dancing Script", cursive;
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
       font-size: 29px;
     }
 
+
     .connection-card p {
+
       color: #bcaeb3;
+
       font-size: 13px;
+
       line-height: 1.8;
     }
 
-    /* =========================
-       GALERIA
-    ========================= */
+
+    /* =====================================
+       GALERÍA
+    ===================================== */
 
     .gallery {
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 15px;
     }
 
+
     .photo {
+
       aspect-ratio: 1 / 1;
+
       border-radius: 20px;
+
       overflow: hidden;
 
       position: relative;
@@ -363,220 +656,889 @@
           rgba(255,193,100,.05)
         );
 
-      border: 1px dashed rgba(255,255,255,.15);
+      border:
+        1px dashed
+        rgba(255,255,255,.15);
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
-      cursor: pointer;
       transition: .4s;
     }
 
+
     .photo:hover {
-      transform: scale(1.02);
-      border-color: rgba(255,113,142,.5);
+
+      transform:
+        scale(1.02);
+
+      border-color:
+        rgba(255,113,142,.5);
     }
 
+
     .photo img {
+
       width: 100%;
+
       height: 100%;
+
       object-fit: cover;
+
       display: block;
     }
 
+
     .photo-placeholder {
+
       text-align: center;
+
       color: #987f87;
+
       padding: 20px;
     }
 
+
     .photo-placeholder span {
+
       display: block;
+
       font-size: 35px;
+
       margin-bottom: 10px;
     }
 
-    /* =========================
-       CARTA
-    ========================= */
 
-    .letter {
-      max-width: 800px;
+    /* =====================================
+       CARTA CERRADA
+    ===================================== */
+
+    .letter-section {
+
+      text-align: center;
+    }
+
+
+    .letter-intro {
+
+      max-width: 600px;
+
+      margin:
+        -25px auto 45px;
+
+      color: #bcaeb3;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+
+    .letter-wrapper {
+
+      width: 100%;
+
+      max-width: 720px;
+
       margin: auto;
 
-      padding: 55px 40px;
+      perspective: 1200px;
+    }
+
+
+    .envelope {
+
+      position: relative;
+
+      width: 100%;
+
+      max-width: 620px;
+
+      height: 390px;
+
+      margin: auto;
+
+      cursor: pointer;
+
+      transition:
+        transform .5s ease;
+    }
+
+
+    .envelope:hover {
+
+      transform:
+        translateY(-5px);
+    }
+
+
+    .envelope-back {
+
+      position: absolute;
+
+      inset: 0;
 
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,.06),
-          rgba(255,255,255,.025)
+          #8f4056,
+          #612b3b
         );
 
-      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
 
-      border-radius: 30px;
-
-      box-shadow: 0 30px 80px rgba(0,0,0,.25);
+      box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.4);
     }
 
-    .letter p {
-      color: #d9c8cd;
+
+    .envelope-paper {
+
+      position: absolute;
+
+      left: 7%;
+
+      right: 7%;
+
+      top: 8%;
+
+      height: 82%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff8ed,
+          #f7e9d6
+        );
+
+      border-radius: 7px;
+
+      transform:
+        translateY(25px);
+
+      transition:
+        transform 1s ease,
+        opacity .7s ease;
+
+      overflow: hidden;
+
+      z-index: 1;
+    }
+
+
+    .envelope.opened
+    .envelope-paper {
+
+      transform:
+        translateY(-80px);
+
+      opacity: 0;
+    }
+
+
+    .paper-lines {
+
+      padding: 30px;
+
+      color: #593a40;
+
+      text-align: left;
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size: 22px;
+    }
+
+
+    .envelope-flap {
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 55%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #b75a72,
+          #843b51
+        );
+
+      clip-path:
+        polygon(
+          0 0,
+          100% 0,
+          50% 100%
+        );
+
+      transform-origin: top;
+
+      transition:
+        transform 1s ease;
+
+      z-index: 4;
+
+      border-radius:
+        12px 12px 0 0;
+    }
+
+
+    .envelope.opened
+    .envelope-flap {
+
+      transform:
+        rotateX(180deg);
+
+      z-index: 0;
+    }
+
+
+    .envelope-front {
+
+      position: absolute;
+
+      bottom: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 58%;
+
+      background:
+        linear-gradient(
+          145deg,
+          #a94e68,
+          #713147
+        );
+
+      clip-path:
+        polygon(
+          0 0,
+          50% 65%,
+          100% 0,
+          100% 100%,
+          0 100%
+        );
+
+      z-index: 3;
+
+      border-radius:
+        0 0 12px 12px;
+    }
+
+
+    .seal {
+
+      position: absolute;
+
+      left: 50%;
+
+      top: 50%;
+
+      transform:
+        translate(-50%, -50%);
+
+      width: 70px;
+
+      height: 70px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          #ff8fa8,
+          #bd3e5e
+        );
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 30px;
+
+      box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.3);
+
+      z-index: 5;
+
+      transition:
+        opacity .5s ease;
+    }
+
+
+    .envelope.opened
+    .seal {
+
+      opacity: 0;
+    }
+
+
+    .click-letter {
+
+      margin-top: 30px;
+
+      color: #ff91a8;
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      animation:
+        gentlePulse 2s infinite;
+    }
+
+
+    /* =====================================
+       CARTA ABIERTA
+    ===================================== */
+
+    .letter-content {
+
+      max-width: 800px;
+
+      margin: 0 auto;
+
+      padding:
+        55px 40px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff8ed,
+          #f4e4d0
+        );
+
+      color: #51373c;
+
+      border-radius: 8px;
+
+      box-shadow:
+        0 35px 90px
+        rgba(0,0,0,.45);
+
+      text-align: left;
+
+      opacity: 0;
+
+      transform:
+        translateY(50px)
+        scale(.95);
+
+      max-height: 0;
+
+      overflow: hidden;
+
+      transition:
+        opacity 1s ease,
+        transform 1s ease,
+        max-height 1.2s ease;
+
+      pointer-events: none;
+    }
+
+
+    .letter-content.visible {
+
+      opacity: 1;
+
+      transform:
+        translateY(0)
+        scale(1);
+
+      max-height: 1500px;
+
+      pointer-events: auto;
+
+      margin-top: 60px;
+    }
+
+
+    .letter-content p {
+
+      font-size: 15px;
+
       line-height: 2;
-      font-size: 16px;
+
       margin-bottom: 22px;
     }
 
-    .letter .opening {
-      font-family: "Dancing Script", cursive;
-      font-size: 35px;
-      color: #ff9db1;
+
+    .letter-content .opening {
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size: 38px;
+
+      color: #a63e5c;
     }
+
+
+    .letter-content .highlight {
+
+      color: #a63e5c;
+    }
+
 
     .signature {
+
       margin-top: 40px;
+
       text-align: right;
 
-      font-family: "Dancing Script", cursive;
+      font-family:
+        "Dancing Script",
+        cursive;
+
       font-size: 35px;
-      color: #ff829d;
+
+      color: #a63e5c;
     }
 
-    /* =========================
-       PROMESA
-    ========================= */
 
-    .promise {
+    /* =====================================
+       BRINDIS
+    ===================================== */
+
+    .toast-section {
+
       text-align: center;
+
+      min-height: 700px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
     }
 
-    .promise-content {
+
+    .toast-container {
+
       max-width: 850px;
+
+      width: 100%;
+
       margin: auto;
     }
 
+
+    .toast-subtitle {
+
+      color: #bcaeb3;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      max-width: 550px;
+
+      margin:
+        -20px auto 55px;
+    }
+
+
+    .glasses {
+
+      height: 320px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: flex-end;
+
+      gap: 90px;
+
+      position: relative;
+    }
+
+
+    .glass {
+
+      position: relative;
+
+      width: 95px;
+
+      height: 180px;
+
+      opacity: .3;
+
+      transform:
+        translateY(60px)
+        rotate(0deg);
+
+      transition:
+        opacity .6s ease;
+    }
+
+
+    .glass.visible {
+
+      opacity: 1;
+
+      animation:
+        glassEnter 1.3s ease forwards;
+    }
+
+
+    .glass.left.visible {
+
+      animation:
+        glassLeft 1.5s ease forwards;
+    }
+
+
+    .glass.right.visible {
+
+      animation:
+        glassRight 1.5s ease forwards;
+    }
+
+
+    .glass-bowl {
+
+      position: absolute;
+
+      top: 0;
+
+      left: 5px;
+
+      width: 85px;
+
+      height: 110px;
+
+      border:
+        3px solid
+        rgba(255,255,255,.75);
+
+      border-top:
+        3px solid
+        rgba(255,255,255,.9);
+
+      border-radius:
+        10px 10px 45px 45px;
+
+      overflow: hidden;
+
+      background:
+        rgba(255,255,255,.04);
+    }
+
+
+    .wine {
+
+      position: absolute;
+
+      bottom: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 58%;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(194, 56, 85, .9),
+          rgba(246, 119, 142, .65)
+        );
+
+      transform:
+        translateY(100%);
+
+      transition:
+        transform 1.5s ease .3s;
+    }
+
+
+    .glass.visible .wine {
+
+      transform:
+        translateY(0);
+    }
+
+
+    .stem {
+
+      position: absolute;
+
+      top: 108px;
+
+      left: 46px;
+
+      width: 3px;
+
+      height: 65px;
+
+      background:
+        rgba(255,255,255,.7);
+    }
+
+
+    .base {
+
+      position: absolute;
+
+      bottom: 0;
+
+      left: 10px;
+
+      width: 75px;
+
+      height: 5px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255,255,255,.7);
+    }
+
+
+    .toast-button {
+
+      margin-top: 45px;
+
+      padding:
+        16px 30px;
+
+      border: 1px solid
+        rgba(255,255,255,.12);
+
+      border-radius: 50px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,91,130,.8),
+          rgba(177,63,89,.8)
+        );
+
+      color: white;
+
+      cursor: pointer;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      box-shadow:
+        0 10px 35px
+        rgba(255,70,100,.2);
+
+      transition: .3s;
+    }
+
+
+    .toast-button:hover {
+
+      transform:
+        translateY(-3px)
+        scale(1.03);
+    }
+
+
+    .toast-message {
+
+      margin-top: 30px;
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size:
+        clamp(
+          28px,
+          6vw,
+          48px
+        );
+
+      color: #ffe8ed;
+
+      opacity: 0;
+
+      transform:
+        translateY(20px);
+
+      transition:
+        1s ease;
+    }
+
+
+    .toast-message.show {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =====================================
+       PROMESA
+    ===================================== */
+
+    .promise {
+
+      text-align: center;
+    }
+
+
+    .promise-content {
+
+      max-width: 850px;
+
+      margin: auto;
+    }
+
+
     .promise-text {
-      font-family: "Dancing Script", cursive;
-      font-size: clamp(38px, 7vw, 65px);
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size:
+        clamp(
+          38px,
+          7vw,
+          65px
+        );
+
       line-height: 1.25;
+
       color: #ffe8ed;
     }
 
+
     .promise-text span {
+
       color: #ff718e;
     }
 
-    /* =========================
+
+    /* =====================================
        FINAL
-    ========================= */
+    ===================================== */
 
     .final {
+
       min-height: 75vh;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       text-align: center;
     }
 
+
     .final-content {
+
       max-width: 800px;
     }
 
+
     .final-heart {
+
       font-size: 65px;
-      animation: heartbeat 1.5s infinite;
+
+      animation:
+        heartbeat 1.5s infinite;
+
       margin-bottom: 25px;
     }
 
+
     .final h2 {
-      font-family: "Dancing Script", cursive;
-      font-size: clamp(50px, 9vw, 90px);
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size:
+        clamp(
+          50px,
+          9vw,
+          90px
+        );
+
       line-height: 1;
     }
 
+
     .final p {
+
       margin-top: 25px;
+
       color: #bcaeb3;
+
       line-height: 1.8;
     }
 
+
     .forever {
+
       display: inline-block;
+
       margin-top: 35px;
 
       color: #ff8fa7;
 
-      font-size: 11px;
+      font-size: 10px;
+
       letter-spacing: 4px;
+
       text-transform: uppercase;
     }
 
-    /* =========================
-       REPRODUCTOR
-    ========================= */
 
-    .music-button {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-
-      width: 55px;
-      height: 55px;
-
-      border: none;
-      border-radius: 50%;
-
-      background: rgba(255, 88, 120, .9);
-      color: white;
-
-      cursor: pointer;
-      z-index: 1000;
-
-      font-size: 20px;
-
-      box-shadow: 0 10px 30px rgba(0,0,0,.3);
-
-      transition: .3s;
-    }
-
-    .music-button:hover {
-      transform: scale(1.08);
-    }
-
-    /* =========================
-       CORAZONES
-    ========================= */
-
-    .floating-heart {
-      position: fixed;
-      bottom: -30px;
-      pointer-events: none;
-      z-index: 20;
-
-      animation: heartFloat linear forwards;
-    }
-
-    /* =========================
+    /* =====================================
        ANIMACIONES
-    ========================= */
+    ===================================== */
 
     @keyframes introAppear {
+
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform:
+          translateY(20px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform:
+          translateY(0);
       }
     }
 
+
     @keyframes heartbeat {
-      0%, 100% {
+
+      0%,100% {
         transform: scale(1);
       }
 
@@ -585,107 +1547,263 @@
       }
     }
 
+
     @keyframes bounce {
-      0%, 100% {
-        transform: translate(-50%, 0);
+
+      0%,100% {
+        transform:
+          translate(-50%,0);
       }
 
       50% {
-        transform: translate(-50%, -10px);
+        transform:
+          translate(-50%,-10px);
       }
     }
+
 
     @keyframes floatUp {
+
       from {
-        transform: translateY(110vh) rotate(0deg);
+        transform:
+          translateY(110vh)
+          rotate(0deg);
       }
 
       to {
-        transform: translateY(-20vh) rotate(360deg);
+        transform:
+          translateY(-20vh)
+          rotate(360deg);
       }
     }
 
-    @keyframes heartFloat {
-      from {
-        transform: translateY(0) scale(.5) rotate(0deg);
-        opacity: 0;
+
+    @keyframes musicPulse {
+
+      0%,100% {
+        transform: scale(1);
       }
 
-      10% {
-        opacity: .8;
-      }
-
-      to {
-        transform: translateY(-110vh) scale(1.3) rotate(25deg);
-        opacity: 0;
+      50% {
+        transform: scale(1.15);
       }
     }
 
-    /* =========================
+
+    @keyframes gentlePulse {
+
+      0%,100% {
+        opacity: .55;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+
+    @keyframes glassLeft {
+
+      0% {
+        transform:
+          translateX(-130px)
+          translateY(70px)
+          rotate(-18deg);
+      }
+
+      70% {
+        transform:
+          translateX(45px)
+          translateY(0)
+          rotate(8deg);
+      }
+
+      100% {
+        transform:
+          translateX(35px)
+          translateY(0)
+          rotate(8deg);
+      }
+    }
+
+
+    @keyframes glassRight {
+
+      0% {
+        transform:
+          translateX(130px)
+          translateY(70px)
+          rotate(18deg);
+      }
+
+      70% {
+        transform:
+          translateX(-45px)
+          translateY(0)
+          rotate(-8deg);
+      }
+
+      100% {
+        transform:
+          translateX(-35px)
+          translateY(0)
+          rotate(-8deg);
+      }
+    }
+
+
+    /* =====================================
        RESPONSIVE
-    ========================= */
+    ===================================== */
 
     @media (max-width: 750px) {
 
       section {
-        padding: 75px 18px;
+
+        padding:
+          75px 18px;
       }
+
 
       .connection-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
+
 
       .gallery {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
-      .letter {
-        padding: 35px 23px;
+
+      .letter-content {
+
+        padding:
+          35px 23px;
       }
 
-      .letter p {
+
+      .letter-content p {
+
         font-size: 14px;
       }
 
-      .hero {
-        min-height: 100svh;
+
+      .envelope {
+
+        height: 300px;
+      }
+
+
+      .glasses {
+
+        gap: 35px;
+
+        height: 270px;
+      }
+
+
+      .glass {
+
+        transform:
+          scale(.8);
       }
     }
+
 
     @media (max-width: 430px) {
 
       .gallery {
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:
+          repeat(2,1fr);
+
         gap: 10px;
       }
 
+
       .story-card {
-        padding: 35px 20px;
+
+        padding:
+          35px 20px;
+      }
+
+
+      .envelope {
+
+        height: 250px;
+      }
+
+
+      .glasses {
+
+        gap: 0;
+      }
+
+
+      .glass {
+
+        transform:
+          scale(.7);
       }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- =========================
+
+  <!-- =====================================
        INTRO
-  ========================= -->
+  ===================================== -->
 
   <div class="intro" id="intro">
 
     <div class="intro-content">
 
-      <div class="intro-heart">??</div>
+      <div class="intro-heart">
+        ❤️
+      </div>
 
-      <h1>Engel & Maricela</h1>
+      <h1>
+        Mi poeta favorito
+        <br>
+        &
+        <br>
+        Mi terroncito de azúcar
+      </h1>
 
       <p>
-        Una historia que ninguno de los dos esperaba...
+        Hay historias que comienzan sin saber
+        que terminarán significándolo todo.
       </p>
 
-      <button class="enter-btn" onclick="enterPage()">
-        Entrar a nuestra historia ??
+
+      <!-- BOTÓN DE MÚSICA -->
+
+      <button
+        class="music-start"
+        id="musicStart"
+        onclick="enterPage()"
+      >
+
+        <span
+          class="music-icon"
+          id="musicIcon"
+        >
+          🎵
+        </span>
+
+        <span id="musicText">
+          Léelo con música
+        </span>
+
       </button>
 
     </div>
@@ -693,45 +1811,55 @@
   </div>
 
 
-  <!-- FONDO -->
+  <!-- =====================================
+       FONDO
+  ===================================== -->
 
   <div class="background-glow"></div>
 
-  <div class="particles" id="particles"></div>
+  <div
+    class="particles"
+    id="particles"
+  ></div>
 
 
-  <!-- =========================
-       MUSICA
-  ========================= -->
+  <!-- =====================================
+       MÚSICA
+  ===================================== -->
 
-  <audio id="music" loop>
+  <audio
+    id="music"
+    loop
+  >
 
     <!--
-      COLOCA AQU� TU CANCI�N.
+      COLOCA TU CANCIÓN AQUÍ.
 
-      Ejemplo:
+      Guarda el archivo como:
 
-      <source src="musica.mp3" type="audio/mpeg">
+      musica.mp3
 
+      en la misma carpeta de index.html.
     -->
+
+    <source
+      src="musica.mp3"
+      type="audio/mpeg"
+    >
 
   </audio>
 
-  <button
-    class="music-button"
-    id="musicButton"
-    onclick="toggleMusic()"
-    aria-label="Reproducir m�sica"
-  >
-    ??
-  </button>
 
-
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- =====================================
+       CONTENIDO
+  ===================================== -->
 
   <main>
+
+
+    <!-- =================================
+         HERO
+    ================================= -->
 
     <section class="hero">
 
@@ -741,29 +1869,41 @@
           Nuestra historia
         </div>
 
+
         <h1>
-          Engel
-          <span>?</span>
-          Maricela
+
+          Mi poeta favorito
+
+          <span>♥</span>
+
+          Mi terroncito de azúcar
+
         </h1>
 
+
         <p class="hero-subtitle">
-          Dos personas que se encontraron sin saber
-          que terminar�an cambi�ndose la vida para siempre.
+
+          Dos personas que se encontraron
+          sin saber que terminarían
+          cambiándose la vida para siempre.
+
         </p>
 
       </div>
 
+
       <div class="scroll-down">
-        DESLIZA ?
+
+        DESLIZA ↓
+
       </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- =================================
          HISTORIA
-    ========================= -->
+    ================================= -->
 
     <section class="story">
 
@@ -771,9 +1911,13 @@
 
         <div class="section-title">
 
-          <span>Donde comenz� todo</span>
+          <span>
+            Donde comenzó todo
+          </span>
 
-          <h2>Nuestra historia</h2>
+          <h2>
+            Nuestra historia
+          </h2>
 
         </div>
 
@@ -781,7 +1925,9 @@
         <div class="story-card">
 
           <div class="story-date">
-            ?? EL D�A QUE TODO COMENZ�
+
+            📅 EL DÍA QUE TODO COMENZÓ
+
           </div>
 
 
@@ -789,45 +1935,59 @@
 
             Hay encuentros que parecen casualidad,
             pero con el tiempo uno entiende que
-            quiz� estaban destinados a suceder.
+            quizá estaban destinados a suceder.
 
           </p>
 
 
           <p>
 
-            T�, <span class="highlight">Maricela</span>,
+            Tú,
+            <span class="highlight">
+              mi terroncito de azúcar
+            </span>,
             volviste a creer en el amor.
 
-            Y yo, <span class="highlight">Engel</span>,
-            encontr� en ti algo que jam�s pens� encontrar:
-
-            una persona capaz de entrar en mi vida,
-            conocer mis partes m�s oscuras
-            y ayudarme a encontrar nuevamente la luz.
+            Y yo,
+            <span class="highlight">
+              mi poeta favorito
+            </span>,
+            encontré en ti algo que jamás
+            pensé encontrar.
 
           </p>
 
 
           <p>
 
-            Me ayudaste a dejar atr�s los vicios,
+            Encontré a alguien capaz de entrar
+            en mi vida, conocer mis partes más
+            oscuras y ayudarme a encontrar
+            nuevamente la luz.
+
+          </p>
+
+
+          <p>
+
+            Me ayudaste a dejar atrás los vicios,
             a mirar hacia adelante y a entender
-            que mi vida pod�a tomar otro rumbo.
+            que mi vida podía tomar otro rumbo.
 
           </p>
 
 
           <p>
 
-            Y quiz� lo m�s bonito de todo
-            es que ninguno de los dos sabe explicar
-            exactamente qu� nos une.
+            Y quizá lo más bonito de todo
+            es que ninguno de los dos sabe
+            explicar exactamente qué nos une.
 
-            Simplemente existe.
+            <br><br>
 
-            Esa conexi�n inexplicable que sentimos
-            cuando estamos juntos.
+            <span class="highlight">
+              Simplemente existe.
+            </span>
 
           </p>
 
@@ -838,9 +1998,9 @@
     </section>
 
 
-    <!-- =========================
-         CONEXION
-    ========================= -->
+    <!-- =================================
+         CONEXIÓN
+    ================================= -->
 
     <section>
 
@@ -848,27 +2008,39 @@
 
         <div class="section-title">
 
-          <span>Lo que somos</span>
+          <span>
+            Lo que somos
+          </span>
 
-          <h2>Una conexi�n diferente</h2>
+          <h2>
+            Una conexión diferente
+          </h2>
 
         </div>
 
 
         <div class="connection-grid">
 
+
           <div class="connection-card">
 
             <div class="connection-icon">
-              ??
+              ❤️
             </div>
 
-            <h3>Amor</h3>
+            <h3>
+              Amor
+            </h3>
 
             <p>
-              No es solamente decir "te amo".
-              Es elegirnos incluso en los d�as
-              en los que todo parece complicado.
+
+              No es solamente decir
+              "te amo".
+
+              Es elegirnos incluso en
+              los días en los que todo
+              parece complicado.
+
             </p>
 
           </div>
@@ -877,15 +2049,19 @@
           <div class="connection-card">
 
             <div class="connection-icon">
-              ??
+              🫂
             </div>
 
-            <h3>Refugio</h3>
+            <h3>
+              Refugio
+            </h3>
 
             <p>
+
               Encontrarnos el uno en el otro
               y sentir que por un momento
               el mundo deja de pesar.
+
             </p>
 
           </div>
@@ -894,17 +2070,24 @@
           <div class="connection-card">
 
             <div class="connection-icon">
-              ?
+              ✨
             </div>
 
-            <h3>Destino</h3>
+            <h3>
+              Destino
+            </h3>
 
             <p>
-              Porque hay conexiones que no necesitan
-              explicaci�n. Solo necesitan sentirse.
+
+              Porque hay conexiones que
+              no necesitan explicación.
+
+              Solo necesitan sentirse.
+
             </p>
 
           </div>
+
 
         </div>
 
@@ -913,9 +2096,9 @@
     </section>
 
 
-    <!-- =========================
-         GALERIA
-    ========================= -->
+    <!-- =================================
+         GALERÍA
+    ================================= -->
 
     <section>
 
@@ -923,9 +2106,13 @@
 
         <div class="section-title">
 
-          <span>Nuestros recuerdos</span>
+          <span>
+            Nuestros recuerdos
+          </span>
 
-          <h2>Momentos contigo</h2>
+          <h2>
+            Momentos contigo
+          </h2>
 
         </div>
 
@@ -933,24 +2120,25 @@
         <div class="gallery">
 
 
-          <!-- FOTO 1 -->
-
           <div class="photo">
 
             <!--
-              PARA PONER UNA FOTO:
+              CAMBIA ESTE CONTENIDO POR:
 
-              Reemplaza el contenido por:
-
-              <img src="foto1.jpg" alt="Nuestro recuerdo">
+              <img
+                src="fotos/foto1.jpg"
+                alt="Nuestro recuerdo"
+              >
             -->
 
             <div class="photo-placeholder">
 
-              <span>??</span>
+              <span>
+                📸
+              </span>
 
               <small>
-                Coloca aqu� nuestra foto
+                Coloca aquí nuestra foto
               </small>
 
             </div>
@@ -958,13 +2146,13 @@
           </div>
 
 
-          <!-- FOTO 2 -->
-
           <div class="photo">
 
             <div class="photo-placeholder">
 
-              <span>??</span>
+              <span>
+                🌻
+              </span>
 
               <small>
                 Nuestro recuerdo
@@ -975,13 +2163,13 @@
           </div>
 
 
-          <!-- FOTO 3 -->
-
           <div class="photo">
 
             <div class="photo-placeholder">
 
-              <span>??</span>
+              <span>
+                ❤️
+              </span>
 
               <small>
                 Un momento especial
@@ -992,13 +2180,13 @@
           </div>
 
 
-          <!-- FOTO 4 -->
-
           <div class="photo">
 
             <div class="photo-placeholder">
 
-              <span>??</span>
+              <span>
+                🥹
+              </span>
 
               <small>
                 Ese momento
@@ -1009,13 +2197,13 @@
           </div>
 
 
-          <!-- FOTO 5 -->
-
           <div class="photo">
 
             <div class="photo-placeholder">
 
-              <span>??</span>
+              <span>
+                💋
+              </span>
 
               <small>
                 Un recuerdo nuestro
@@ -1026,13 +2214,13 @@
           </div>
 
 
-          <!-- FOTO 6 -->
-
           <div class="photo">
 
             <div class="photo-placeholder">
 
-              <span>??</span>
+              <span>
+                💕
+              </span>
 
               <small>
                 Para siempre
@@ -1042,6 +2230,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -1049,34 +2238,107 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =================================
          CARTA
-    ========================= -->
+    ================================= -->
 
-    <section>
+    <section class="letter-section">
 
       <div class="section-container">
 
         <div class="section-title">
 
-          <span>Para ti</span>
+          <span>
+            Algo que quiero decirte
+          </span>
 
-          <h2>Maricela...</h2>
+          <h2>
+            Una carta para ti
+          </h2>
 
         </div>
 
 
-        <div class="letter">
+        <p class="letter-intro">
+
+          Hay cosas que se sienten demasiado grandes
+          para decirlas simplemente con un mensaje.
+
+          Por eso esta vez quiero dejarlas aquí,
+          escritas solamente para ti.
+
+        </p>
+
+
+        <!-- SOBRE -->
+
+        <div class="letter-wrapper">
+
+          <div
+            class="envelope"
+            id="envelope"
+            onclick="openLetter()"
+          >
+
+            <div class="envelope-back"></div>
+
+
+            <div class="envelope-paper">
+
+              <div class="paper-lines">
+
+                Para mi terroncito de azúcar... ❤️
+
+              </div>
+
+            </div>
+
+
+            <div class="envelope-flap"></div>
+
+
+            <div class="envelope-front"></div>
+
+
+            <div class="seal">
+
+              ❤️
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="click-letter"
+            id="clickLetter"
+          >
+
+            ✉️ Haz clic en la carta para abrirla
+
+          </div>
+
+        </div>
+
+
+        <!-- CARTA ABIERTA -->
+
+        <div
+          class="letter-content"
+          id="letterContent"
+        >
 
           <p class="opening">
-            Mi amor...
+
+            Mi terroncito de azúcar...
+
           </p>
 
 
           <p>
 
-            Si alg�n d�a me preguntaran qu� cambi�
-            mi vida, probablemente hablar�a de ti.
+            Si algún día me preguntaran qué cambió
+            mi vida, probablemente hablaría de ti.
 
           </p>
 
@@ -1084,7 +2346,7 @@
           <p>
 
             Porque llegaste a mi vida y, sin darte cuenta,
-            hiciste algo que quiz� nunca imaginaste.
+            hiciste algo que quizá nunca imaginaste.
 
             Me ayudaste a salir de una oscuridad
             en la que llevaba demasiado tiempo.
@@ -1094,20 +2356,21 @@
 
           <p>
 
-            Y mientras t� volv�as a creer en el amor,
-            yo volv�a a creer en m�.
+            Y mientras tú volvías a creer en el amor,
+            yo volvía a creer en mí.
 
           </p>
 
 
           <p>
 
-            No s� c�mo explicar lo que existe entre nosotros.
-            No s� por qu� contigo todo se siente diferente.
+            No sé cómo explicar lo que existe entre nosotros.
 
-            Solo s� que cuando estoy contigo,
-            existe una tranquilidad que no encuentro
-            en ning�n otro lugar.
+            No sé por qué contigo todo se siente diferente.
+
+            Solo sé que cuando estoy contigo existe
+            una tranquilidad que no encuentro
+            en ningún otro lugar.
 
           </p>
 
@@ -1117,7 +2380,7 @@
             Te amo por quien eres,
             por lo que hemos vivido,
             por lo que hemos superado
-            y por todo aquello que todav�a
+            y por todo aquello que todavía
             nos falta vivir.
 
           </p>
@@ -1131,24 +2394,40 @@
 
             Con nuestras risas,
             nuestras locuras,
-            nuestros momentos dif�ciles,
-            nuestros abrazos,
-            nuestras reconciliaciones
-            y todos esos peque�os momentos
-            que solamente nosotros entendemos.
+            nuestros momentos difíciles,
+            nuestros abrazos y todos esos pequeños
+            momentos que solamente nosotros entendemos.
 
           </p>
 
 
           <p>
 
-            Y si alguna vez dudas de cu�nto significas para m�,
-            recuerda esto:
+            Y si alguna vez dudas de cuánto significas
+            para mí, recuerda esto:
+
+          </p>
+
+
+          <p>
 
             <span class="highlight">
-              t� no solamente llegaste a mi vida;
-              tambi�n cambiaste el rumbo de ella.
+
+              Tú no solamente llegaste a mi vida;
+              también cambiaste el rumbo de ella.
+
             </span>
+
+          </p>
+
+
+          <p>
+
+            Gracias por creer nuevamente en el amor.
+
+            Gracias por llegar.
+
+            Gracias por ser tú.
 
           </p>
 
@@ -1159,7 +2438,7 @@
 
             <br>
 
-            Engel ??
+            Mi poeta favorito ❤️
 
           </div>
 
@@ -1170,9 +2449,115 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =================================
+         BRINDIS
+    ================================= -->
+
+    <section class="toast-section">
+
+      <div class="toast-container">
+
+        <div class="section-title">
+
+          <span>
+            Por nosotros
+          </span>
+
+          <h2>
+            Hagamos un brindis
+          </h2>
+
+        </div>
+
+
+        <p class="toast-subtitle">
+
+          Por el día que nos encontramos,
+          por todo lo que hemos vivido
+          y por todo aquello que todavía
+          nos queda por escribir juntos.
+
+        </p>
+
+
+        <!-- COPAS -->
+
+        <div class="glasses">
+
+
+          <div
+            class="glass left"
+            id="glassLeft"
+          >
+
+            <div class="glass-bowl">
+
+              <div class="wine"></div>
+
+            </div>
+
+            <div class="stem"></div>
+
+            <div class="base"></div>
+
+          </div>
+
+
+          <div
+            class="glass right"
+            id="glassRight"
+          >
+
+            <div class="glass-bowl">
+
+              <div class="wine"></div>
+
+            </div>
+
+            <div class="stem"></div>
+
+            <div class="base"></div>
+
+          </div>
+
+
+        </div>
+
+
+        <button
+          class="toast-button"
+          id="toastButton"
+          onclick="makeToast()"
+        >
+
+          🥂 Brindemos por nosotros
+
+        </button>
+
+
+        <div
+          class="toast-message"
+          id="toastMessage"
+        >
+
+          Por nosotros...
+          <br>
+
+          por nuestro amor
+          <br>
+
+          y por todo lo que viene. ❤️
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
          PROMESA
-    ========================= -->
+    ================================= -->
 
     <section class="promise">
 
@@ -1180,9 +2565,13 @@
 
         <div class="section-title">
 
-          <span>Si pudiera pedir algo</span>
+          <span>
+            Si pudiera pedir algo
+          </span>
 
-          <h2>Mi deseo</h2>
+          <h2>
+            Mi deseo
+          </h2>
 
         </div>
 
@@ -1192,7 +2581,7 @@
           Que nunca olvidemos
 
           <span>
-            por qu� comenzamos.
+            por qué comenzamos.
           </span>
 
         </div>
@@ -1202,30 +2591,30 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =================================
          FINAL
-    ========================= -->
+    ================================= -->
 
     <section class="final">
 
       <div class="final-content">
 
         <div class="final-heart">
-          ??
+          ❤️
         </div>
 
 
         <h2>
-          T� y yo.
+          Tú y yo.
         </h2>
 
 
         <p>
 
-          Quiz� el mundo nos hizo encontrarnos
+          Quizá el mundo nos hizo encontrarnos
           por casualidad.
 
-          Pero despu�s de todo lo que hemos vivido,
+          Pero después de todo lo que hemos vivido,
           yo prefiero pensar que fue el destino.
 
         </p>
@@ -1241,14 +2630,16 @@
 
         <p class="highlight">
 
-          volver�a a elegirte.
+          volvería a elegirte.
 
         </p>
 
 
         <div class="forever">
 
-          Engel & Maricela � Siempre nosotros
+          Mi poeta favorito
+          ❤️
+          Mi terroncito de azúcar
 
         </div>
 
@@ -1256,86 +2647,70 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- =========================
+  <!-- =====================================
        JAVASCRIPT
-  ========================= -->
+  ===================================== -->
 
   <script>
 
-    const intro = document.getElementById("intro");
-    const music = document.getElementById("music");
-    const musicButton = document.getElementById("musicButton");
+
+    /* =================================
+       ELEMENTOS
+    ================================= */
+
+    const intro =
+      document.getElementById("intro");
+
+    const music =
+      document.getElementById("music");
+
+    const musicStart =
+      document.getElementById("musicStart");
+
+    const musicIcon =
+      document.getElementById("musicIcon");
+
+    const musicText =
+      document.getElementById("musicText");
+
 
     let playing = false;
 
 
-    /*
-    ================================
-    ENTRAR A LA P�GINA
-    ================================
-    */
+    /* =================================
+       ENTRAR + MÚSICA
+    ================================= */
 
     function enterPage() {
 
       intro.classList.add("hidden");
 
-      setTimeout(() => {
 
-        if (music) {
-
-          music.play()
-            .then(() => {
-
-              playing = true;
-              musicButton.textContent = "??";
-
-            })
-            .catch(() => {
-
-              playing = false;
-
-            });
-
-        }
-
-      }, 700);
-
-    }
-
-
-    /*
-    ================================
-    MUSICA
-    ================================
-    */
-
-    function toggleMusic() {
-
-      if (!music) return;
-
-      if (playing) {
-
-        music.pause();
-
-        musicButton.textContent = "??";
-
-        playing = false;
-
-      } else {
+      if (music) {
 
         music.play()
           .then(() => {
 
-            musicButton.textContent = "??";
             playing = true;
+
+            musicStart.classList.add(
+              "playing"
+            );
+
+            musicIcon.textContent = "🔊";
+
+            musicText.textContent =
+              "Música activada ❤️";
 
           })
           .catch(() => {
 
-            alert("Primero coloca tu archivo de m�sica en el c�digo ??");
+            musicText.textContent =
+              "Entrar a nuestra historia ❤️";
 
           });
 
@@ -1344,143 +2719,460 @@
     }
 
 
-    /*
-    ================================
-    PARTICULAS
-    ================================
-    */
+    /* =================================
+       CARTA
+    ================================= */
 
-    const particles = document.getElementById("particles");
+    function openLetter() {
+
+      const envelope =
+        document.getElementById(
+          "envelope"
+        );
+
+      const letterContent =
+        document.getElementById(
+          "letterContent"
+        );
+
+      const clickLetter =
+        document.getElementById(
+          "clickLetter"
+        );
+
+
+      envelope.classList.add(
+        "opened"
+      );
+
+
+      setTimeout(() => {
+
+        letterContent.classList.add(
+          "visible"
+        );
+
+        clickLetter.style.opacity = "0";
+
+        setTimeout(() => {
+
+          letterContent.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+        }, 400);
+
+      }, 700);
+
+    }
+
+
+    /* =================================
+       SONIDO DE COPAS
+    ================================= */
+
+    function glassSound() {
+
+      const AudioContext =
+        window.AudioContext ||
+        window.webkitAudioContext;
+
+      if (!AudioContext) return;
+
+
+      const audioContext =
+        new AudioContext();
+
+
+      const now =
+        audioContext.currentTime;
+
+
+      /*
+        Creamos varias frecuencias
+        cortas para simular el
+        "cling" de una copa.
+      */
+
+
+      const frequencies = [
+        1800,
+        2400,
+        3100
+      ];
+
+
+      frequencies.forEach(
+        (frequency, index) => {
+
+          const oscillator =
+            audioContext.createOscillator();
+
+          const gain =
+            audioContext.createGain();
+
+
+          oscillator.type =
+            "sine";
+
+
+          oscillator.frequency.value =
+            frequency;
+
+
+          gain.gain.setValueAtTime(
+            0.0001,
+            now
+          );
+
+
+          gain.gain.exponentialRampToValueAtTime(
+            0.18,
+            now + 0.01
+          );
+
+
+          gain.gain.exponentialRampToValueAtTime(
+            0.0001,
+            now + 0.7 + index * 0.05
+          );
+
+
+          oscillator.connect(gain);
+
+          gain.connect(
+            audioContext.destination
+          );
+
+
+          oscillator.start(
+            now + index * 0.025
+          );
+
+
+          oscillator.stop(
+            now + 0.8
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =================================
+       BRINDIS
+    ================================= */
+
+    function makeToast() {
+
+      const left =
+        document.getElementById(
+          "glassLeft"
+        );
+
+      const right =
+        document.getElementById(
+          "glassRight"
+        );
+
+      const message =
+        document.getElementById(
+          "toastMessage"
+        );
+
+      const button =
+        document.getElementById(
+          "toastButton"
+        );
+
+
+      left.classList.remove(
+        "visible"
+      );
+
+      right.classList.remove(
+        "visible"
+      );
+
+
+      /*
+        Reiniciamos animación.
+      */
+
+      void left.offsetWidth;
+
+      void right.offsetWidth;
+
+
+      left.classList.add(
+        "visible"
+      );
+
+      right.classList.add(
+        "visible"
+      );
+
+
+      setTimeout(() => {
+
+        glassSound();
+
+        createToastSparkles();
+
+      }, 1250);
+
+
+      setTimeout(() => {
+
+        message.classList.add(
+          "show"
+        );
+
+        button.textContent =
+          "🥂 Otro brindis por nosotros";
+
+      }, 1500);
+
+    }
+
+
+    /* =================================
+       DESTELLOS DEL BRINDIS
+    ================================= */
+
+    function createToastSparkles() {
+
+      const symbols = [
+        "✨",
+        "💫",
+        "❤️",
+        "🥂"
+      ];
+
+
+      for (
+        let i = 0;
+        i < 12;
+        i++
+      ) {
+
+        const sparkle =
+          document.createElement(
+            "div"
+          );
+
+
+        sparkle.textContent =
+          symbols[
+            Math.floor(
+              Math.random() *
+              symbols.length
+            )
+          ];
+
+
+        sparkle.style.position =
+          "fixed";
+
+
+        sparkle.style.left =
+          (
+            50 +
+            (Math.random() * 30 - 15)
+          ) + "%";
+
+
+        sparkle.style.top =
+          (
+            48 +
+            (Math.random() * 15 - 7)
+          ) + "%";
+
+
+        sparkle.style.fontSize =
+          (
+            12 +
+            Math.random() * 18
+          ) + "px";
+
+
+        sparkle.style.pointerEvents =
+          "none";
+
+
+        sparkle.style.zIndex =
+          "100";
+
+
+        sparkle.style.transition =
+          "all 1.5s ease";
+
+
+        document.body.appendChild(
+          sparkle
+        );
+
+
+        setTimeout(() => {
+
+          sparkle.style.transform =
+            `
+              translate(
+                ${(Math.random() * 160 - 80)}px,
+                ${(Math.random() * -180 - 40)}px
+              )
+              scale(1.5)
+            `;
+
+          sparkle.style.opacity =
+            "0";
+
+        }, 50);
+
+
+        setTimeout(() => {
+
+          sparkle.remove();
+
+        }, 1700);
+
+      }
+
+    }
+
+
+    /* =================================
+       PARTICULAS
+    ================================= */
+
+    const particles =
+      document.getElementById(
+        "particles"
+      );
+
 
     const symbols = [
-      "?",
-      "?",
-      "?",
-      "?",
-      "??"
+      "♡",
+      "♥",
+      "✦",
+      "✧",
+      "🌻"
     ];
 
 
-    for (let i = 0; i < 25; i++) {
+    for (
+      let i = 0;
+      i < 25;
+      i++
+    ) {
 
-      const particle = document.createElement("div");
+      const particle =
+        document.createElement(
+          "div"
+        );
 
-      particle.className = "particle";
+
+      particle.className =
+        "particle";
+
 
       particle.textContent =
-        symbols[Math.floor(Math.random() * symbols.length)];
+        symbols[
+          Math.floor(
+            Math.random() *
+            symbols.length
+          )
+        ];
+
 
       particle.style.left =
         Math.random() * 100 + "%";
 
+
       particle.style.animationDuration =
-        (12 + Math.random() * 18) + "s";
+        (
+          12 +
+          Math.random() * 18
+        ) + "s";
+
 
       particle.style.animationDelay =
-        (-Math.random() * 20) + "s";
+        (
+          -Math.random() * 20
+        ) + "s";
+
 
       particle.style.fontSize =
-        (10 + Math.random() * 16) + "px";
-
-      particles.appendChild(particle);
-
-    }
-
-
-    /*
-    ================================
-    CORAZONES AL HACER CLICK
-    ================================
-    */
-
-    document.addEventListener("click", function(e) {
-
-      if (
-        e.target.closest(".enter-btn") ||
-        e.target.closest(".music-button")
-      ) {
-        return;
-      }
+        (
+          10 +
+          Math.random() * 16
+        ) + "px";
 
 
-      createHeart(
-        e.clientX,
-        e.clientY
+      particles.appendChild(
+        particle
       );
 
-    });
-
-
-    function createHeart(x, y) {
-
-      const heart = document.createElement("div");
-
-      heart.className = "floating-heart";
-
-      heart.textContent =
-        Math.random() > .3 ? "??" : "??";
-
-      heart.style.left =
-        x + "px";
-
-      heart.style.bottom =
-        (window.innerHeight - y) + "px";
-
-      heart.style.fontSize =
-        (12 + Math.random() * 18) + "px";
-
-      heart.style.animationDuration =
-        (2 + Math.random() * 2) + "s";
-
-      document.body.appendChild(heart);
-
-
-      setTimeout(() => {
-
-        heart.remove();
-
-      }, 4000);
-
     }
 
 
-    /*
-    ================================
-    CORAZONES AUTOMATICOS
-    ================================
-    */
+    /* =================================
+       CORAZONES AUTOMÁTICOS
+    ================================= */
 
     setInterval(() => {
 
-      const heart = document.createElement("div");
+      const heart =
+        document.createElement(
+          "div"
+        );
 
-      heart.className = "floating-heart";
+
+      heart.className =
+        "particle";
+
 
       heart.textContent =
-        Math.random() > .15 ? "??" : "??";
+        Math.random() > .15
+          ? "❤️"
+          : "🌻";
+
 
       heart.style.left =
-        Math.random() * window.innerWidth + "px";
+        Math.random() * 100 + "%";
 
-      heart.style.fontSize =
-        (10 + Math.random() * 15) + "px";
+
+      heart.style.top =
+        "105%";
+
 
       heart.style.animationDuration =
-        (5 + Math.random() * 4) + "s";
+        (
+          7 +
+          Math.random() * 5
+        ) + "s";
 
-      document.body.appendChild(heart);
+
+      particles.appendChild(
+        heart
+      );
 
 
       setTimeout(() => {
 
         heart.remove();
 
-      }, 9000);
+      }, 12000);
 
     }, 1800);
 
 
   </script>
 
+
 </body>
+
 </html>
+```
