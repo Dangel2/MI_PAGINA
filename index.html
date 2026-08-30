@@ -11,7 +11,9 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Mi poeta favorito ❤️ Mi terroncito de azúcar</title>
+  <title>
+    Tu poeta favorito ❤️ Mi terroncito de azúcar
+  </title>
 
   <meta
     name="description"
@@ -87,10 +89,8 @@
     ===================================== */
 
     .intro {
-
       position: fixed;
       inset: 0;
-
       z-index: 9999;
 
       display: flex;
@@ -115,44 +115,41 @@
 
 
     .intro.hidden {
-
       opacity: 0;
-
       visibility: hidden;
-
       pointer-events: none;
     }
 
 
     .intro-content {
-
       max-width: 700px;
-
       padding: 30px;
 
-      animation: introAppear 1.5s ease;
+      animation:
+        introAppear 1.5s ease;
     }
 
 
     .intro-heart {
-
       font-size: 70px;
-
       margin-bottom: 20px;
 
-      animation: heartbeat 1.5s infinite;
+      animation:
+        heartbeat 1.5s infinite;
     }
 
 
     .intro h1 {
+      font-family:
+        "Dancing Script",
+        cursive;
 
-      font-family: "Dancing Script", cursive;
-
-      font-size: clamp(
-        45px,
-        10vw,
-        85px
-      );
+      font-size:
+        clamp(
+          45px,
+          10vw,
+          85px
+        );
 
       color: #ffd1dc;
 
@@ -161,7 +158,6 @@
 
 
     .intro p {
-
       margin-top: 20px;
 
       color: #d8bfc6;
@@ -173,19 +169,15 @@
 
 
     /* =====================================
-       BOTÓN DE MÚSICA INICIAL
+       BOTÓN DE MÚSICA
     ===================================== */
 
     .music-start {
-
       margin-top: 30px;
 
-      border: 1px solid rgba(
-        255,
-        255,
-        255,
-        .18
-      );
+      border:
+        1px solid
+        rgba(255,255,255,.18);
 
       background:
         linear-gradient(
@@ -196,13 +188,16 @@
 
       color: white;
 
-      padding: 16px 27px;
+      padding:
+        16px 27px;
 
       border-radius: 50px;
 
       cursor: pointer;
 
-      font-family: "Montserrat", sans-serif;
+      font-family:
+        "Montserrat",
+        sans-serif;
 
       font-size: 14px;
 
@@ -223,7 +218,6 @@
 
 
     .music-start:hover {
-
       transform:
         translateY(-3px)
         scale(1.03);
@@ -235,7 +229,6 @@
 
 
     .music-start.playing {
-
       background:
         linear-gradient(
           135deg,
@@ -246,7 +239,6 @@
 
 
     .music-icon {
-
       font-size: 20px;
 
       animation:
@@ -259,9 +251,7 @@
     ===================================== */
 
     .particles {
-
       position: fixed;
-
       inset: 0;
 
       pointer-events: none;
@@ -271,7 +261,6 @@
 
 
     .particle {
-
       position: absolute;
 
       opacity: .45;
@@ -286,7 +275,6 @@
     ===================================== */
 
     .hero {
-
       min-height: 100vh;
 
       position: relative;
@@ -310,7 +298,6 @@
 
 
     .hero-content {
-
       max-width: 950px;
 
       position: relative;
@@ -320,7 +307,6 @@
 
 
     .small-title {
-
       color: #ff9bb0;
 
       letter-spacing: 4px;
@@ -334,19 +320,18 @@
 
 
     .hero h1 {
-
       font-family:
         "Dancing Script",
         cursive;
 
       font-size:
         clamp(
-          55px,
-          12vw,
-          135px
+          45px,
+          9vw,
+          105px
         );
 
-      line-height: .9;
+      line-height: 1;
 
       color: #fff0f4;
 
@@ -357,13 +342,11 @@
 
 
     .hero h1 span {
-
       color: #ff718e;
     }
 
 
     .hero-subtitle {
-
       margin-top: 30px;
 
       font-size:
@@ -382,7 +365,6 @@
 
 
     .scroll-down {
-
       position: absolute;
 
       bottom: 30px;
@@ -408,7 +390,6 @@
     ===================================== */
 
     section {
-
       padding:
         100px 20px;
 
@@ -419,7 +400,6 @@
 
 
     .section-container {
-
       max-width: 1050px;
 
       margin: auto;
@@ -427,7 +407,6 @@
 
 
     .section-title {
-
       text-align: center;
 
       margin-bottom: 55px;
@@ -435,7 +414,6 @@
 
 
     .section-title span {
-
       display: block;
 
       color: #ff829d;
@@ -451,7 +429,6 @@
 
 
     .section-title h2 {
-
       font-family:
         "Dancing Script",
         cursive;
@@ -472,14 +449,12 @@
     ===================================== */
 
     .story {
-
       background:
         rgba(255,255,255,.015);
     }
 
 
     .story-card {
-
       padding:
         50px 30px;
 
@@ -501,7 +476,6 @@
 
 
     .story-date {
-
       display: inline-block;
 
       padding:
@@ -523,7 +497,6 @@
 
 
     .story-card p {
-
       max-width: 750px;
 
       margin: auto;
@@ -537,13 +510,11 @@
 
 
     .story-card p + p {
-
       margin-top: 25px;
     }
 
 
     .highlight {
-
       color: #ff9eb2;
 
       font-weight: 600;
@@ -555,7 +526,6 @@
     ===================================== */
 
     .connection-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -566,8 +536,8 @@
 
 
     .connection-card {
-
-      padding: 35px 25px;
+      padding:
+        35px 25px;
 
       text-align: center;
 
@@ -585,7 +555,6 @@
 
 
     .connection-card:hover {
-
       transform:
         translateY(-8px);
 
@@ -595,7 +564,6 @@
 
 
     .connection-icon {
-
       font-size: 38px;
 
       margin-bottom: 18px;
@@ -603,7 +571,6 @@
 
 
     .connection-card h3 {
-
       margin-bottom: 12px;
 
       font-family:
@@ -615,7 +582,6 @@
 
 
     .connection-card p {
-
       color: #bcaeb3;
 
       font-size: 13px;
@@ -629,58 +595,117 @@
     ===================================== */
 
     .gallery {
-
       display: grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 15px;
+      gap: 18px;
     }
 
 
-    .photo {
+    /*
+      TARJETA 3D
+    */
+
+    .photo-card {
 
       aspect-ratio: 1 / 1;
+
+      perspective: 1000px;
+
+      cursor: pointer;
+
+    }
+
+
+    /*
+      CONTENEDOR QUE GIRA
+    */
+
+    .photo-inner {
+
+      position: relative;
+
+      width: 100%;
+
+      height: 100%;
+
+      transform-style: preserve-3d;
+
+      transition:
+        transform .8s
+        cubic-bezier(
+          .4,
+          .2,
+          .2,
+          1
+        );
+
+    }
+
+
+    /*
+      AL HACER CLICK
+    */
+
+    .photo-card.flipped
+    .photo-inner {
+
+      transform:
+        rotateY(180deg);
+
+    }
+
+
+    /*
+      FRENTE Y PARTE TRASERA
+    */
+
+    .photo-front,
+    .photo-back {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
 
       border-radius: 20px;
 
       overflow: hidden;
 
-      position: relative;
+      backface-visibility: hidden;
+
+      -webkit-backface-visibility:
+        hidden;
+
+    }
+
+
+    /*
+      FRENTE
+    */
+
+    .photo-front {
 
       background:
-        linear-gradient(
-          135deg,
-          rgba(255,113,142,.1),
-          rgba(255,193,100,.05)
-        );
+        #211418;
 
       border:
-        1px dashed
-        rgba(255,255,255,.15);
+        1px solid
+        rgba(255,255,255,.1);
 
-      display: flex;
+      box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.3);
 
-      align-items: center;
-
-      justify-content: center;
-
-      transition: .4s;
     }
 
 
-    .photo:hover {
-
-      transform:
-        scale(1.02);
-
-      border-color:
-        rgba(255,113,142,.5);
-    }
-
-
-    .photo img {
+    .photo-front img {
 
       width: 100%;
 
@@ -689,41 +714,164 @@
       object-fit: cover;
 
       display: block;
+
+      transition:
+        transform .5s ease;
+
     }
 
 
-    .photo-placeholder {
+    /*
+      Pequeño efecto al pasar
+      el mouse
+    */
+
+    .photo-card:hover
+    .photo-front img {
+
+      transform:
+        scale(1.04);
+
+    }
+
+
+    /*
+      PARTE TRASERA
+    */
+
+    .photo-back {
+
+      transform:
+        rotateY(180deg);
+
+      background:
+
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255,113,142,.22),
+          transparent 40%
+        ),
+
+        linear-gradient(
+          145deg,
+          #7d344b,
+          #321820
+        );
+
+      border:
+        1px solid
+        rgba(255,174,190,.2);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 30px;
 
       text-align: center;
 
-      color: #987f87;
+      box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.4);
 
-      padding: 20px;
     }
 
 
-    .photo-placeholder span {
+    .photo-back-content {
 
-      display: block;
+      display: flex;
 
-      font-size: 35px;
+      flex-direction: column;
 
-      margin-bottom: 10px;
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 15px;
+
+    }
+
+
+    .photo-back-icon {
+
+      font-size: 38px;
+
+      animation:
+        heartbeat 2s infinite;
+
+    }
+
+
+    .photo-back h3 {
+
+      font-family:
+        "Dancing Script",
+        cursive;
+
+      font-size: 32px;
+
+      color: #ffe9ee;
+
+    }
+
+
+    .photo-back p {
+
+      color: #f0d9df;
+
+      font-size: 13px;
+
+      line-height: 1.8;
+
+      max-width: 330px;
+
+    }
+
+
+    .photo-back .memory-number {
+
+      font-size: 9px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: #ffb4c5;
+
+    }
+
+
+    /*
+      INDICADOR
+    */
+
+    .gallery-hint {
+
+      text-align: center;
+
+      margin-top: 25px;
+
+      color: #9e858d;
+
+      font-size: 11px;
+
+      letter-spacing: 1px;
+
     }
 
 
     /* =====================================
-       CARTA CERRADA
+       CARTA
     ===================================== */
 
     .letter-section {
-
       text-align: center;
     }
 
 
     .letter-intro {
-
       max-width: 600px;
 
       margin:
@@ -738,7 +886,6 @@
 
 
     .letter-wrapper {
-
       width: 100%;
 
       max-width: 720px;
@@ -750,7 +897,6 @@
 
 
     .envelope {
-
       position: relative;
 
       width: 100%;
@@ -769,14 +915,12 @@
 
 
     .envelope:hover {
-
       transform:
         translateY(-5px);
     }
 
 
     .envelope-back {
-
       position: absolute;
 
       inset: 0;
@@ -797,7 +941,6 @@
 
 
     .envelope-paper {
-
       position: absolute;
 
       left: 7%;
@@ -832,7 +975,6 @@
 
     .envelope.opened
     .envelope-paper {
-
       transform:
         translateY(-80px);
 
@@ -841,7 +983,6 @@
 
 
     .paper-lines {
-
       padding: 30px;
 
       color: #593a40;
@@ -857,7 +998,6 @@
 
 
     .envelope-flap {
-
       position: absolute;
 
       top: 0;
@@ -896,7 +1036,6 @@
 
     .envelope.opened
     .envelope-flap {
-
       transform:
         rotateX(180deg);
 
@@ -905,7 +1044,6 @@
 
 
     .envelope-front {
-
       position: absolute;
 
       bottom: 0;
@@ -940,7 +1078,6 @@
 
 
     .seal {
-
       position: absolute;
 
       left: 50%;
@@ -984,13 +1121,11 @@
 
     .envelope.opened
     .seal {
-
       opacity: 0;
     }
 
 
     .click-letter {
-
       margin-top: 30px;
 
       color: #ff91a8;
@@ -1011,10 +1146,10 @@
     ===================================== */
 
     .letter-content {
-
       max-width: 800px;
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
       padding:
         55px 40px;
@@ -1056,7 +1191,6 @@
 
 
     .letter-content.visible {
-
       opacity: 1;
 
       transform:
@@ -1072,7 +1206,6 @@
 
 
     .letter-content p {
-
       font-size: 15px;
 
       line-height: 2;
@@ -1082,7 +1215,6 @@
 
 
     .letter-content .opening {
-
       font-family:
         "Dancing Script",
         cursive;
@@ -1094,13 +1226,11 @@
 
 
     .letter-content .highlight {
-
       color: #a63e5c;
     }
 
 
     .signature {
-
       margin-top: 40px;
 
       text-align: right;
@@ -1120,7 +1250,6 @@
     ===================================== */
 
     .toast-section {
-
       text-align: center;
 
       min-height: 700px;
@@ -1134,7 +1263,6 @@
 
 
     .toast-container {
-
       max-width: 850px;
 
       width: 100%;
@@ -1144,7 +1272,6 @@
 
 
     .toast-subtitle {
-
       color: #bcaeb3;
 
       font-size: 14px;
@@ -1159,7 +1286,6 @@
 
 
     .glasses {
-
       height: 320px;
 
       display: flex;
@@ -1175,18 +1301,16 @@
 
 
     .glass {
-
       position: relative;
 
       width: 95px;
 
       height: 180px;
 
-      opacity: .3;
+      opacity: .25;
 
       transform:
-        translateY(60px)
-        rotate(0deg);
+        translateY(60px);
 
       transition:
         opacity .6s ease;
@@ -1194,30 +1318,23 @@
 
 
     .glass.visible {
-
       opacity: 1;
-
-      animation:
-        glassEnter 1.3s ease forwards;
     }
 
 
     .glass.left.visible {
-
       animation:
         glassLeft 1.5s ease forwards;
     }
 
 
     .glass.right.visible {
-
       animation:
         glassRight 1.5s ease forwards;
     }
 
 
     .glass-bowl {
-
       position: absolute;
 
       top: 0;
@@ -1247,7 +1364,6 @@
 
 
     .wine {
-
       position: absolute;
 
       bottom: 0;
@@ -1274,14 +1390,12 @@
 
 
     .glass.visible .wine {
-
       transform:
         translateY(0);
     }
 
 
     .stem {
-
       position: absolute;
 
       top: 108px;
@@ -1298,7 +1412,6 @@
 
 
     .base {
-
       position: absolute;
 
       bottom: 0;
@@ -1317,13 +1430,13 @@
 
 
     .toast-button {
-
       margin-top: 45px;
 
       padding:
         16px 30px;
 
-      border: 1px solid
+      border:
+        1px solid
         rgba(255,255,255,.12);
 
       border-radius: 50px;
@@ -1352,7 +1465,6 @@
 
 
     .toast-button:hover {
-
       transform:
         translateY(-3px)
         scale(1.03);
@@ -1360,7 +1472,6 @@
 
 
     .toast-message {
-
       margin-top: 30px;
 
       font-family:
@@ -1387,7 +1498,6 @@
 
 
     .toast-message.show {
-
       opacity: 1;
 
       transform:
@@ -1400,13 +1510,11 @@
     ===================================== */
 
     .promise {
-
       text-align: center;
     }
 
 
     .promise-content {
-
       max-width: 850px;
 
       margin: auto;
@@ -1414,7 +1522,6 @@
 
 
     .promise-text {
-
       font-family:
         "Dancing Script",
         cursive;
@@ -1433,7 +1540,6 @@
 
 
     .promise-text span {
-
       color: #ff718e;
     }
 
@@ -1443,7 +1549,6 @@
     ===================================== */
 
     .final {
-
       min-height: 75vh;
 
       display: flex;
@@ -1457,13 +1562,11 @@
 
 
     .final-content {
-
       max-width: 800px;
     }
 
 
     .final-heart {
-
       font-size: 65px;
 
       animation:
@@ -1474,7 +1577,6 @@
 
 
     .final h2 {
-
       font-family:
         "Dancing Script",
         cursive;
@@ -1491,7 +1593,6 @@
 
 
     .final p {
-
       margin-top: 25px;
 
       color: #bcaeb3;
@@ -1501,7 +1602,6 @@
 
 
     .forever {
-
       display: inline-block;
 
       margin-top: 35px;
@@ -1524,12 +1624,14 @@
 
       from {
         opacity: 0;
+
         transform:
           translateY(20px);
       }
 
       to {
         opacity: 1;
+
         transform:
           translateY(0);
       }
@@ -1539,11 +1641,13 @@
     @keyframes heartbeat {
 
       0%,100% {
-        transform: scale(1);
+        transform:
+          scale(1);
       }
 
       50% {
-        transform: scale(1.15);
+        transform:
+          scale(1.15);
       }
     }
 
@@ -1581,11 +1685,13 @@
     @keyframes musicPulse {
 
       0%,100% {
-        transform: scale(1);
+        transform:
+          scale(1);
       }
 
       50% {
-        transform: scale(1.15);
+        transform:
+          scale(1.15);
       }
     }
 
@@ -1659,47 +1765,42 @@
     @media (max-width: 750px) {
 
       section {
-
         padding:
           75px 18px;
       }
 
 
       .connection-grid {
-
         grid-template-columns:
           1fr;
       }
 
 
       .gallery {
-
         grid-template-columns:
           repeat(2,1fr);
+
+        gap: 12px;
       }
 
 
       .letter-content {
-
         padding:
           35px 23px;
       }
 
 
       .letter-content p {
-
         font-size: 14px;
       }
 
 
       .envelope {
-
         height: 300px;
       }
 
 
       .glasses {
-
         gap: 35px;
 
         height: 270px;
@@ -1707,48 +1808,96 @@
 
 
       .glass {
-
         transform:
           scale(.8);
       }
+
+
+      .photo-back {
+        padding: 15px;
+      }
+
+
+      .photo-back h3 {
+        font-size: 24px;
+      }
+
+
+      .photo-back p {
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+
+      .photo-back-icon {
+        font-size: 28px;
+      }
+
     }
 
 
     @media (max-width: 430px) {
 
       .gallery {
-
         grid-template-columns:
           repeat(2,1fr);
 
-        gap: 10px;
+        gap: 9px;
       }
 
 
       .story-card {
-
         padding:
           35px 20px;
       }
 
 
       .envelope {
-
         height: 250px;
       }
 
 
       .glasses {
-
         gap: 0;
       }
 
 
       .glass {
-
         transform:
           scale(.7);
       }
+
+
+      .photo-back {
+        padding: 10px;
+      }
+
+
+      .photo-back h3 {
+        font-size: 20px;
+      }
+
+
+      .photo-back p {
+        font-size: 9px;
+        line-height: 1.45;
+      }
+
+
+      .photo-back-icon {
+        font-size: 22px;
+      }
+
+
+      .photo-back-content {
+        gap: 7px;
+      }
+
+
+      .photo-back .memory-number {
+        font-size: 7px;
+      }
+
     }
 
   </style>
@@ -1763,7 +1912,10 @@
        INTRO
   ===================================== -->
 
-  <div class="intro" id="intro">
+  <div
+    class="intro"
+    id="intro"
+  >
 
     <div class="intro-content">
 
@@ -1771,21 +1923,29 @@
         ❤️
       </div>
 
+
       <h1>
-        Mi poeta favorito
+
+        Tu poeta favorito
+
         <br>
+
         &
+
         <br>
+
         Mi terroncito de azúcar
+
       </h1>
 
+
       <p>
+
         Hay historias que comienzan sin saber
         que terminarán significándolo todo.
+
       </p>
 
-
-      <!-- BOTÓN DE MÚSICA -->
 
       <button
         class="music-start"
@@ -1832,18 +1992,25 @@
     loop
   >
 
-    <!--
-      COLOCA TU CANCIÓN AQUÍ.
+    <source
+      src="nuestra-cancion.mp3"
+      type="audio/mpeg"
+    >
 
-      Guarda el archivo como:
+  </audio>
 
-      musica.mp3
 
-      en la misma carpeta de index.html.
-    -->
+  <!-- =====================================
+       SONIDO DE COPAS
+  ===================================== -->
+
+  <audio
+    id="glassSound"
+    preload="auto"
+  >
 
     <source
-      src="musica.mp3"
+      src="sonido-copas.mp3"
       type="audio/mpeg"
     >
 
@@ -1857,9 +2024,7 @@
   <main>
 
 
-    <!-- =================================
-         HERO
-    ================================= -->
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -1872,7 +2037,7 @@
 
         <h1>
 
-          Mi poeta favorito
+          Tu poeta favorito
 
           <span>♥</span>
 
@@ -1901,9 +2066,7 @@
     </section>
 
 
-    <!-- =================================
-         HISTORIA
-    ================================= -->
+    <!-- HISTORIA -->
 
     <section class="story">
 
@@ -1925,9 +2088,7 @@
         <div class="story-card">
 
           <div class="story-date">
-
             📅 EL DÍA QUE TODO COMENZÓ
-
           </div>
 
 
@@ -1942,16 +2103,10 @@
 
           <p>
 
-            Tú,
-            <span class="highlight">
-              mi terroncito de azúcar
-            </span>,
+            Tú, mi terroncito de azúcar,
             volviste a creer en el amor.
 
-            Y yo,
-            <span class="highlight">
-              mi poeta favorito
-            </span>,
+            Y yo, tu poeta favorito,
             encontré en ti algo que jamás
             pensé encontrar.
 
@@ -1998,9 +2153,7 @@
     </section>
 
 
-    <!-- =================================
-         CONEXIÓN
-    ================================= -->
+    <!-- CONEXIÓN -->
 
     <section>
 
@@ -2097,7 +2250,7 @@
 
 
     <!-- =================================
-         GALERÍA
+         GALERÍA CON FOTOS GIRATORIAS
     ================================= -->
 
     <section>
@@ -2120,116 +2273,342 @@
         <div class="gallery">
 
 
-          <div class="photo">
+          <!-- FOTO 1 -->
 
-            <!--
-              CAMBIA ESTE CONTENIDO POR:
+          <div
+            class="photo-card"
+            onclick="flipPhoto(this)"
+          >
 
-              <img
-                src="fotos/foto1.jpg"
-                alt="Nuestro recuerdo"
-              >
-            -->
+            <div class="photo-inner">
 
-            <div class="photo-placeholder">
+              <div class="photo-front">
 
-              <span>
-                📸
-              </span>
+                <img
+                  src="foto1.jpg"
+                  alt="Nuestro recuerdo 1"
+                >
 
-              <small>
-                Coloca aquí nuestra foto
-              </small>
-
-            </div>
-
-          </div>
+              </div>
 
 
-          <div class="photo">
+              <div class="photo-back">
 
-            <div class="photo-placeholder">
+                <div class="photo-back-content">
 
-              <span>
-                🌻
-              </span>
+                  <div class="photo-back-icon">
+                    ❤️
+                  </div>
 
-              <small>
-                Nuestro recuerdo
-              </small>
+                  <div class="memory-number">
+                    RECUERDO 01
+                  </div>
 
-            </div>
+                  <h3>
+                    El comienzo
+                  </h3>
 
-          </div>
+                  <p>
 
+                    Esta foto representa
+                    uno de esos momentos
+                    que guardo en mi corazón
+                    porque fue parte de la
+                    historia que comenzó
+                    a unirnos.
 
-          <div class="photo">
+                  </p>
 
-            <div class="photo-placeholder">
+                </div>
 
-              <span>
-                ❤️
-              </span>
-
-              <small>
-                Un momento especial
-              </small>
+              </div>
 
             </div>
 
           </div>
 
 
-          <div class="photo">
+          <!-- FOTO 2 -->
 
-            <div class="photo-placeholder">
+          <div
+            class="photo-card"
+            onclick="flipPhoto(this)"
+          >
 
-              <span>
-                🥹
-              </span>
+            <div class="photo-inner">
 
-              <small>
-                Ese momento
-              </small>
+              <div class="photo-front">
+
+                <img
+                  src="foto2.jpg"
+                  alt="Nuestro recuerdo 2"
+                >
+
+              </div>
+
+
+              <div class="photo-back">
+
+                <div class="photo-back-content">
+
+                  <div class="photo-back-icon">
+                    🫂
+                  </div>
+
+                  <div class="memory-number">
+                    RECUERDO 02
+                  </div>
+
+                  <h3>
+                    Un momento contigo
+                  </h3>
+
+                  <p>
+
+                    Porque contigo hasta
+                    los momentos más sencillos
+                    terminan convirtiéndose
+                    en recuerdos que quiero
+                    conservar para siempre.
+
+                  </p>
+
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
 
-          <div class="photo">
+          <!-- FOTO 3 -->
 
-            <div class="photo-placeholder">
+          <div
+            class="photo-card"
+            onclick="flipPhoto(this)"
+          >
 
-              <span>
-                💋
-              </span>
+            <div class="photo-inner">
 
-              <small>
-                Un recuerdo nuestro
-              </small>
+              <div class="photo-front">
+
+                <img
+                  src="foto3.jpg"
+                  alt="Nuestro recuerdo 3"
+                >
+
+              </div>
+
+
+              <div class="photo-back">
+
+                <div class="photo-back-content">
+
+                  <div class="photo-back-icon">
+                    ✨
+                  </div>
+
+                  <div class="memory-number">
+                    RECUERDO 03
+                  </div>
+
+                  <h3>
+                    Esa sonrisa
+                  </h3>
+
+                  <p>
+
+                    Una de las cosas que más
+                    amo de ti es esa manera
+                    que tienes de hacer que
+                    un momento cualquiera
+                    se vuelva especial.
+
+                  </p>
+
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
 
-          <div class="photo">
+          <!-- FOTO 4 -->
 
-            <div class="photo-placeholder">
+          <div
+            class="photo-card"
+            onclick="flipPhoto(this)"
+          >
 
-              <span>
-                💕
-              </span>
+            <div class="photo-inner">
 
-              <small>
-                Para siempre
-              </small>
+              <div class="photo-front">
+
+                <img
+                  src="foto4.jpg"
+                  alt="Nuestro recuerdo 4"
+                >
+
+              </div>
+
+
+              <div class="photo-back">
+
+                <div class="photo-back-content">
+
+                  <div class="photo-back-icon">
+                    🌻
+                  </div>
+
+                  <div class="memory-number">
+                    RECUERDO 04
+                  </div>
+
+                  <h3>
+                    Lo bonito
+                  </h3>
+
+                  <p>
+
+                    Esta imagen me recuerda
+                    que el amor también vive
+                    en los pequeños detalles,
+                    en las miradas y en esos
+                    instantes que parecen
+                    simples pero significan todo.
+
+                  </p>
+
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
+
+          <!-- FOTO 5 -->
+
+          <div
+            class="photo-card"
+            onclick="flipPhoto(this)"
+          >
+
+            <div class="photo-inner">
+
+              <div class="photo-front">
+
+                <img
+                  src="foto5.jpg"
+                  alt="Nuestro recuerdo 5"
+                >
+
+              </div>
+
+
+              <div class="photo-back">
+
+                <div class="photo-back-content">
+
+                  <div class="photo-back-icon">
+                    💕
+                  </div>
+
+                  <div class="memory-number">
+                    RECUERDO 05
+                  </div>
+
+                  <h3>
+                    Nosotros
+                  </h3>
+
+                  <p>
+
+                    No importa dónde estemos
+                    ni qué esté pasando alrededor.
+                    Si estamos juntos, siempre
+                    existe un pedacito de hogar
+                    en nosotros.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FOTO 6 -->
+
+          <div
+            class="photo-card"
+            onclick="flipPhoto(this)"
+          >
+
+            <div class="photo-inner">
+
+              <div class="photo-front">
+
+                <img
+                  src="foto6.jpg"
+                  alt="Nuestro recuerdo 6"
+                >
+
+              </div>
+
+
+              <div class="photo-back">
+
+                <div class="photo-back-content">
+
+                  <div class="photo-back-icon">
+                    ♾️
+                  </div>
+
+                  <div class="memory-number">
+                    RECUERDO 06
+                  </div>
+
+                  <h3>
+                    Lo que queda
+                  </h3>
+
+                  <p>
+
+                    Porque algunas fotografías
+                    no solamente guardan una
+                    imagen.
+
+                    Guardan sentimientos,
+                    momentos y una historia
+                    que quiero seguir escribiendo
+                    contigo.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="gallery-hint">
+
+          ✨ Toca cualquier foto para descubrir
+          lo que significa ✨
 
         </div>
 
@@ -2269,8 +2648,6 @@
 
         </p>
 
-
-        <!-- SOBRE -->
 
         <div class="letter-wrapper">
 
@@ -2320,8 +2697,6 @@
 
         </div>
 
-
-        <!-- CARTA ABIERTA -->
 
         <div
           class="letter-content"
@@ -2438,7 +2813,7 @@
 
             <br>
 
-            Mi poeta favorito ❤️
+            Tu poeta favorito ❤️
 
           </div>
 
@@ -2479,8 +2854,6 @@
 
         </p>
 
-
-        <!-- COPAS -->
 
         <div class="glasses">
 
@@ -2541,9 +2914,11 @@
         >
 
           Por nosotros...
+
           <br>
 
           por nuestro amor
+
           <br>
 
           y por todo lo que viene. ❤️
@@ -2555,9 +2930,7 @@
     </section>
 
 
-    <!-- =================================
-         PROMESA
-    ================================= -->
+    <!-- PROMESA -->
 
     <section class="promise">
 
@@ -2591,9 +2964,7 @@
     </section>
 
 
-    <!-- =================================
-         FINAL
-    ================================= -->
+    <!-- FINAL -->
 
     <section class="final">
 
@@ -2637,7 +3008,7 @@
 
         <div class="forever">
 
-          Mi poeta favorito
+          Tu poeta favorito
           ❤️
           Mi terroncito de azúcar
 
@@ -2665,24 +3036,32 @@
     const intro =
       document.getElementById("intro");
 
+
     const music =
       document.getElementById("music");
+
 
     const musicStart =
       document.getElementById("musicStart");
 
+
     const musicIcon =
       document.getElementById("musicIcon");
 
+
     const musicText =
       document.getElementById("musicText");
+
+
+    const glassSound =
+      document.getElementById("glassSound");
 
 
     let playing = false;
 
 
     /* =================================
-       ENTRAR + MÚSICA
+       ENTRAR A LA PÁGINA
     ================================= */
 
     function enterPage() {
@@ -2690,31 +3069,41 @@
       intro.classList.add("hidden");
 
 
-      if (music) {
+      music.play()
+        .then(() => {
 
-        music.play()
-          .then(() => {
+          playing = true;
 
-            playing = true;
+          musicStart.classList.add(
+            "playing"
+          );
 
-            musicStart.classList.add(
-              "playing"
-            );
+          musicIcon.textContent =
+            "🔊";
 
-            musicIcon.textContent = "🔊";
+          musicText.textContent =
+            "Música activada ❤️";
 
-            musicText.textContent =
-              "Música activada ❤️";
+        })
+        .catch(() => {
 
-          })
-          .catch(() => {
+          musicText.textContent =
+            "Entrar a nuestra historia ❤️";
 
-            musicText.textContent =
-              "Entrar a nuestra historia ❤️";
+        });
 
-          });
+    }
 
-      }
+
+    /* =================================
+       FOTOS GIRATORIAS
+    ================================= */
+
+    function flipPhoto(card) {
+
+      card.classList.toggle(
+        "flipped"
+      );
 
     }
 
@@ -2730,10 +3119,12 @@
           "envelope"
         );
 
+
       const letterContent =
         document.getElementById(
           "letterContent"
         );
+
 
       const clickLetter =
         document.getElementById(
@@ -2752,7 +3143,10 @@
           "visible"
         );
 
-        clickLetter.style.opacity = "0";
+
+        clickLetter.style.opacity =
+          "0";
+
 
         setTimeout(() => {
 
@@ -2769,99 +3163,6 @@
 
 
     /* =================================
-       SONIDO DE COPAS
-    ================================= */
-
-    function glassSound() {
-
-      const AudioContext =
-        window.AudioContext ||
-        window.webkitAudioContext;
-
-      if (!AudioContext) return;
-
-
-      const audioContext =
-        new AudioContext();
-
-
-      const now =
-        audioContext.currentTime;
-
-
-      /*
-        Creamos varias frecuencias
-        cortas para simular el
-        "cling" de una copa.
-      */
-
-
-      const frequencies = [
-        1800,
-        2400,
-        3100
-      ];
-
-
-      frequencies.forEach(
-        (frequency, index) => {
-
-          const oscillator =
-            audioContext.createOscillator();
-
-          const gain =
-            audioContext.createGain();
-
-
-          oscillator.type =
-            "sine";
-
-
-          oscillator.frequency.value =
-            frequency;
-
-
-          gain.gain.setValueAtTime(
-            0.0001,
-            now
-          );
-
-
-          gain.gain.exponentialRampToValueAtTime(
-            0.18,
-            now + 0.01
-          );
-
-
-          gain.gain.exponentialRampToValueAtTime(
-            0.0001,
-            now + 0.7 + index * 0.05
-          );
-
-
-          oscillator.connect(gain);
-
-          gain.connect(
-            audioContext.destination
-          );
-
-
-          oscillator.start(
-            now + index * 0.025
-          );
-
-
-          oscillator.stop(
-            now + 0.8
-          );
-
-        }
-      );
-
-    }
-
-
-    /* =================================
        BRINDIS
     ================================= */
 
@@ -2872,15 +3173,18 @@
           "glassLeft"
         );
 
+
       const right =
         document.getElementById(
           "glassRight"
         );
 
+
       const message =
         document.getElementById(
           "toastMessage"
         );
+
 
       const button =
         document.getElementById(
@@ -2892,14 +3196,11 @@
         "visible"
       );
 
+
       right.classList.remove(
         "visible"
       );
 
-
-      /*
-        Reiniciamos animación.
-      */
 
       void left.offsetWidth;
 
@@ -2910,6 +3211,7 @@
         "visible"
       );
 
+
       right.classList.add(
         "visible"
       );
@@ -2917,7 +3219,17 @@
 
       setTimeout(() => {
 
-        glassSound();
+        glassSound.currentTime = 0;
+
+        glassSound.play()
+          .catch(() => {
+
+            console.log(
+              "No se pudo reproducir sonido-copas.mp3"
+            );
+
+          });
+
 
         createToastSparkles();
 
@@ -2930,6 +3242,7 @@
           "show"
         );
 
+
         button.textContent =
           "🥂 Otro brindis por nosotros";
 
@@ -2939,7 +3252,7 @@
 
 
     /* =================================
-       DESTELLOS DEL BRINDIS
+       DESTELLOS
     ================================= */
 
     function createToastSparkles() {
@@ -3025,6 +3338,7 @@
               )
               scale(1.5)
             `;
+
 
           sparkle.style.opacity =
             "0";
@@ -3170,7 +3484,6 @@
 
 
   </script>
-
 
 </body>
 
