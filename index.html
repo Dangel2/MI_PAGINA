@@ -1331,7 +1331,75 @@ h1, h2, h3 {
   <p id="texto-tiempo-juntos" class="tiempo-destacado">Calculando nuestro tiempo...</p>
   <p id="c-total-dias" class="total-dias-texto"></p>
 </div>
+  
     
+    <section class="toast-section">
+      <div class="toast-container">
+        <div class="section-title">
+          <span>Por nosotros</span>
+          <h2>Hagamos un brindis</h2>
+        </div>
+
+        <p class="toast-subtitle">Por el día que nos encontramos, por todo lo que hemos vivido y por todo aquello que todavía nos queda por escribir juntos.</p>
+
+        <div class="glasses">
+          <div class="glass left" id="glassLeft">
+            <div class="glass-bowl">
+              <div class="wine"></div>
+            </div>
+            <div class="stem"></div>
+            <div class="base"></div>
+          </div>
+
+          <div class="glass right" id="glassRight">
+            <div class="glass-bowl">
+              <div class="wine"></div>
+            </div>
+            <div class="stem"></div>
+            <div class="base"></div>
+          </div>
+        </div>
+
+        <button class="toast-button" id="toastButton" onclick="makeToast()">
+          🥂 Brindemos por nosotros
+        </button>
+
+        <div class="toast-message" id="toastMessage">
+          Por nosotros...<br>
+          por nuestro amor<br>
+          y por todo lo que viene. 🌻💙
+        </div>
+      </div>
+    </section>
+
+    <section class="promise">
+      <div class="promise-content">
+        <div class="section-title">
+          <span>Si pudiera pedir algo</span>
+          <h2>Mi deseo</h2>
+        </div>
+
+        <div class="promise-text">
+          Que nunca olvidemos <span>por qué comenzamos.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="final-content">
+        <div class="final-heart">🌻</div>
+        <h2>Tú y yo.</h2>
+        <p>Quizá el mundo nos hizo encontrarnos por casualidad. Pero después de todo lo que hemos vivido, yo prefiero pensar que fue el destino.</p>
+        <p>Y si pudiera regresar al momento en que nuestras vidas se cruzaron...</p>
+        <p class="highlight">volvería a elegirte.</p>
+        <div class="forever">
+          Tu poeta favorito 🌻 Mi terroncito de azúcar
+        </div>
+      </div>
+    </section>
+
+  </main>
+
     <script>
 document.addEventListener("DOMContentLoaded", function() {
   function calcularTiempo() {
@@ -1410,73 +1478,6 @@ document.addEventListener("DOMContentLoaded", function() {
   calcularTiempo();
 });
 </script>
-    
-    <section class="toast-section">
-      <div class="toast-container">
-        <div class="section-title">
-          <span>Por nosotros</span>
-          <h2>Hagamos un brindis</h2>
-        </div>
-
-        <p class="toast-subtitle">Por el día que nos encontramos, por todo lo que hemos vivido y por todo aquello que todavía nos queda por escribir juntos.</p>
-
-        <div class="glasses">
-          <div class="glass left" id="glassLeft">
-            <div class="glass-bowl">
-              <div class="wine"></div>
-            </div>
-            <div class="stem"></div>
-            <div class="base"></div>
-          </div>
-
-          <div class="glass right" id="glassRight">
-            <div class="glass-bowl">
-              <div class="wine"></div>
-            </div>
-            <div class="stem"></div>
-            <div class="base"></div>
-          </div>
-        </div>
-
-        <button class="toast-button" id="toastButton" onclick="makeToast()">
-          🥂 Brindemos por nosotros
-        </button>
-
-        <div class="toast-message" id="toastMessage">
-          Por nosotros...<br>
-          por nuestro amor<br>
-          y por todo lo que viene. 🌻💙
-        </div>
-      </div>
-    </section>
-
-    <section class="promise">
-      <div class="promise-content">
-        <div class="section-title">
-          <span>Si pudiera pedir algo</span>
-          <h2>Mi deseo</h2>
-        </div>
-
-        <div class="promise-text">
-          Que nunca olvidemos <span>por qué comenzamos.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="final">
-      <div class="final-content">
-        <div class="final-heart">🌻</div>
-        <h2>Tú y yo.</h2>
-        <p>Quizá el mundo nos hizo encontrarnos por casualidad. Pero después de todo lo que hemos vivido, yo prefiero pensar que fue el destino.</p>
-        <p>Y si pudiera regresar al momento en que nuestras vidas se cruzaron...</p>
-        <p class="highlight">volvería a elegirte.</p>
-        <div class="forever">
-          Tu poeta favorito 🌻 Mi terroncito de azúcar
-        </div>
-      </div>
-    </section>
-
-  </main>
 
   <script>
     const intro = document.getElementById("intro");
