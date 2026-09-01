@@ -7,7 +7,7 @@
   <title>Tu poeta favorito ❤️ Mi terroncito de azúcar</title>
   <meta name="description" content="Una historia de amor que comenzó sin saber todo lo que llegaría a significar.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
   
@@ -34,62 +34,14 @@
       overflow-x: hidden;
     }
 
-    /* Importación directa al inicio del CSS */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
-
-/* Aplicar la fuente cursiva a los elementos de la carta */
-.carta, 
-.carta p, 
-.titulo-carta, 
-.texto-romantico,
-h1, h2, h3 {
-  font-family: 'Dancing Script', cursive !important;
-  font-weight: 700 !important;
-}
-
-    /* Estilos para el Contador Amoroso */
-.contador-amoroso {
-  background: rgba(255, 255, 255, 0.95);
-  border: 3px solid #ffd700;
-  border-radius: 20px;
-  padding: 25px 20px;
-  
-  /* Centrado en pantalla */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
-  max-width: 90%;
-  width: 450px;
-  margin: 30px auto;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.titulo-contador {
-  color: #1a365d; /* Azul Stitch */
-  font-family: 'Dancing Script', cursive !important;
-  font-size: 2.3rem !important;
-  margin: 0 0 10px 0;
-  font-weight: bold;
-}
-
-.tiempo-destacado {
-  font-size: 2rem !important; /* Texto principal grande */
-  font-weight: bold;
-  color: #d97706; /* Dorado Girasol */
-  margin: 12px 0;
-  font-family: 'Dancing Script', cursive !important;
-  line-height: 1.3;
-}
-
-.total-dias-texto {
-  font-size: 1.2rem !important; /* Días totales */
-  color: #2b6cb0;
-  margin: 8px 0 0 0;
-  font-weight: 600;
-}
+    /* Aplicar la fuente cursiva a los elementos específicos de la carta */
+    .carta, 
+    .carta p, 
+    .titulo-carta, 
+    .texto-romantico {
+      font-family: 'Dancing Script', cursive !important;
+      font-weight: 700 !important;
+    }
 
     /* =====================================
        FONDO GIRASOL & STITCH
@@ -104,14 +56,6 @@ h1, h2, h3 {
         radial-gradient(circle at 80% 60%, rgba(78, 168, 222, 0.12), transparent 35%),
         radial-gradient(circle at 50% 100%, rgba(255, 195, 0, 0.15), transparent 45%);
     }
-
-    .tiempo-destacado {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #d97706; /* Color dorado girasol */
-  margin: 10px 0;
-  font-family: 'Dancing Script', cursive !important;
-}
 
     /* =====================================
        INTRO
@@ -551,7 +495,7 @@ h1, h2, h3 {
       transform: translateY(-5px);
     }
 
-    /* Fondo Interior del Sobre: Azul Stitch Nostálgico */
+    /* Fondo Interior del Sobre */
     .envelope-back {
       position: absolute;
       inset: 0;
@@ -683,7 +627,6 @@ h1, h2, h3 {
       position: relative;
     }
 
-    /* Marca de agua / Marco de Girasoles */
     .letter-content::before {
       content: "🌻";
       position: absolute;
@@ -945,187 +888,77 @@ h1, h2, h3 {
        ANIMACIONES
     ===================================== */
     @keyframes introAppear {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes heartbeat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.15);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
 
     @keyframes bounce {
-      0%, 100% {
-        transform: translate(-50%, 0);
-      }
-      50% {
-        transform: translate(-50%, -10px);
-      }
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -10px); }
     }
 
     @keyframes floatUp {
-      from {
-        transform: translateY(110vh) rotate(0deg);
-      }
-      to {
-        transform: translateY(-20vh) rotate(360deg);
-      }
+      from { transform: translateY(110vh) rotate(0deg); }
+      to { transform: translateY(-20vh) rotate(360deg); }
     }
 
     @keyframes musicPulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.15);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
 
     @keyframes gentlePulse {
-      0%, 100% {
-        opacity: 0.55;
-      }
-      50% {
-        opacity: 1;
-      }
+      0%, 100% { opacity: 0.55; }
+      50% { opacity: 1; }
     }
 
     @keyframes glassLeft {
-      0% {
-        transform: translateX(-130px) translateY(70px) rotate(-18deg);
-      }
-      70% {
-        transform: translateX(45px) translateY(0) rotate(8deg);
-      }
-      100% {
-        transform: translateX(35px) translateY(0) rotate(8deg);
-      }
+      0% { transform: translateX(-130px) translateY(70px) rotate(-18deg); }
+      70% { transform: translateX(45px) translateY(0) rotate(8deg); }
+      100% { transform: translateX(35px) translateY(0) rotate(8deg); }
     }
 
     @keyframes glassRight {
-      0% {
-        transform: translateX(130px) translateY(70px) rotate(18deg);
-      }
-      70% {
-        transform: translateX(-45px) translateY(0) rotate(-8deg);
-      }
-      100% {
-        transform: translateX(-35px) translateY(0) rotate(-8deg);
-      }
+      0% { transform: translateX(130px) translateY(70px) rotate(18deg); }
+      70% { transform: translateX(-45px) translateY(0) rotate(-8deg); }
+      100% { transform: translateX(-35px) translateY(0) rotate(-8deg); }
     }
 
     /* =====================================
        RESPONSIVE
     ===================================== */
     @media (max-width: 750px) {
-      section {
-        padding: 75px 18px;
-      }
-
-      .connection-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .letter-content {
-        padding: 35px 23px;
-      }
-
-      .letter-content p {
-        font-size: 14px;
-      }
-
-      .envelope {
-        height: 300px;
-      }
-
-      .glasses {
-        gap: 35px;
-        height: 270px;
-      }
-
-      .glass {
-        transform: scale(0.8);
-      }
-
-      .photo-back {
-        padding: 15px;
-      }
-
-      .photo-back h3 {
-        font-size: 24px;
-      }
-
-      .photo-back p {
-        font-size: 11px;
-        line-height: 1.6;
-      }
-
-      .photo-back-icon {
-        font-size: 28px;
-      }
+      section { padding: 75px 18px; }
+      .connection-grid { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .letter-content { padding: 35px 23px; }
+      .letter-content p { font-size: 14px; }
+      .envelope { height: 300px; }
+      .glasses { gap: 35px; height: 270px; }
+      .glass { transform: scale(0.8); }
+      .photo-back { padding: 15px; }
+      .photo-back h3 { font-size: 24px; }
+      .photo-back p { font-size: 11px; line-height: 1.6; }
+      .photo-back-icon { font-size: 28px; }
     }
 
     @media (max-width: 430px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 9px;
-      }
-
-      .story-card {
-        padding: 35px 20px;
-      }
-
-      .envelope {
-        height: 250px;
-      }
-
-      .glasses {
-        gap: 0;
-      }
-
-      .glass {
-        transform: scale(0.7);
-      }
-
-      .photo-back {
-        padding: 10px;
-      }
-
-      .photo-back h3 {
-        font-size: 20px;
-      }
-
-      .photo-back p {
-        font-size: 9px;
-        line-height: 1.45;
-      }
-
-      .photo-back-icon {
-        font-size: 22px;
-      }
-
-      .photo-back-content {
-        gap: 7px;
-      }
-
-      .photo-back .memory-number {
-        font-size: 7px;
-      }
+      .gallery { grid-template-columns: repeat(2, 1fr); gap: 9px; }
+      .story-card { padding: 35px 20px; }
+      .envelope { height: 250px; }
+      .glasses { gap: 0; }
+      .glass { transform: scale(0.7); }
+      .photo-back { padding: 10px; }
+      .photo-back h3 { font-size: 20px; }
+      .photo-back p { font-size: 9px; line-height: 1.45; }
+      .photo-back-icon { font-size: 22px; }
+      .photo-back-content { gap: 7px; }
+      .photo-back .memory-number { font-size: 7px; }
     }
   </style>
 </head>
@@ -1369,14 +1202,20 @@ h1, h2, h3 {
       </div>
     </section>
 
-    <!-- Módulo del Contador Dinámico -->
-<div class="contador-amoroso">
-  <p class="titulo-contador">Llevamos juntos:</p>
-  <p id="texto-tiempo-juntos" class="tiempo-destacado">Calculando nuestro tiempo...</p>
-  <p id="c-total-dias" class="total-dias-texto"></p>
-</div>
-  
-    
+    <!-- Módulo del Contador Amoroso Forzado en el Centro -->
+    <div style="width: 100% !important; display: flex !important; justify-content: center !important; align-items: center !important; margin: 40px 0 !important; padding: 0 15px !important; box-sizing: border-box !important;">
+      <div style="background: rgba(255, 255, 255, 0.95) !important; border: 3px solid #ffd700 !important; border-radius: 20px !important; padding: 25px 20px !important; text-align: center !important; width: 100% !important; max-width: 480px !important; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important; display: block !important;">
+        <p style="color: #1a365d !important; font-family: 'Dancing Script', cursive, sans-serif !important; font-size: 2.3rem !important; margin: 0 0 10px 0 !important; font-weight: bold !important; text-align: center !important; width: 100% !important; display: block !important;">
+          Llevamos juntos:
+        </p>
+        <p id="texto-tiempo-juntos" style="font-size: 2rem !important; font-weight: bold !important; color: #d97706 !important; margin: 12px 0 !important; font-family: 'Dancing Script', cursive, sans-serif !important; line-height: 1.3 !important; text-align: center !important; width: 100% !important; display: block !important;">
+          Calculando nuestro tiempo...
+        </p>
+        <p id="c-total-dias" style="font-size: 1.2rem !important; color: #2b6cb0 !important; margin: 8px 0 0 0 !important; font-weight: 600 !important; text-align: center !important; width: 100% !important; display: block !important;">
+        </p>
+      </div>
+    </div>
+
     <section class="toast-section">
       <div class="toast-container">
         <div class="section-title">
@@ -1444,85 +1283,77 @@ h1, h2, h3 {
 
   </main>
 
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-  function calcularTiempo() {
-    const fechaInicio = new Date("2026-03-26T00:00:00");
-    const fechaActual = new Date();
+  <!-- SCRIPT DEL CONTADOR (FUERA DE MAIN) -->
+  <script>
+  (function() {
+    function calcularTiempo() {
+      const fechaInicio = new Date("2026-03-26T00:00:00");
+      const fechaActual = new Date();
 
-    if (fechaActual < fechaInicio) {
-      document.getElementById('texto-tiempo-juntos').textContent = "Nuestra historia comienza hoy 🌻";
-      return;
-    }
+      const elemTexto = document.getElementById('texto-tiempo-juntos');
+      const elemTotal = document.getElementById('c-total-dias');
 
-    let anios = fechaActual.getFullYear() - fechaInicio.getFullYear();
-    let meses = fechaActual.getMonth() - fechaInicio.getMonth();
-    let dias = fechaActual.getDate() - fechaInicio.getDate();
+      if (!elemTexto || !elemTotal) return;
 
-    // Ajuste si los días son negativos
-    if (dias < 0) {
-      meses--;
-      const ultimoDiaMesAnterior = new Date(fechaActual.getFullYear(), fechaActual.getMonth(), 0).getDate();
-      dias += ultimoDiaMesAnterior;
-    }
-
-    // Ajuste si los meses son negativos
-    if (meses < 0) {
-      anios--;
-      meses += 12;
-    }
-
-    // Convertir todo a meses totales si aún no se cumple el primer año, o sumar meses acumulados
-    let totalMeses = (anios * 12) + meses;
-    
-    // Construcción de la frase natural
-    let textoResultado = "";
-
-    // Si ya pasó un año o más
-    if (anios > 0) {
-      const textoAnios = anios === 1 ? "1 año" : `${anios} años`;
-      const textoMeses = meses === 1 ? "1 mes" : `${meses} meses`;
-      const textoDias = dias === 1 ? "1 día" : `${dias} días`;
-
-      if (meses === 0 && dias === 0) {
-        textoResultado = `Llevamos exactamente ${textoAnios} ❤️`;
-      } else if (meses === 0) {
-        textoResultado = `Llevamos ${textoAnios} y ${textoDias} ❤️`;
-      } else if (dias === 0) {
-        textoResultado = `Llevamos ${textoAnios} y ${textoMeses} ❤️`;
-      } else {
-        textoResultado = `Llevamos ${textoAnios}, ${textoMeses} y ${textoDias} ❤️`;
+      if (fechaActual < fechaInicio) {
+        elemTexto.textContent = "Nuestra historia comienza hoy 🌻";
+        elemTotal.textContent = "✨ El inicio de algo hermoso ✨";
+        return;
       }
-    } 
-    // Si llevamos menos de un año (solo meses y días)
-    else {
-      const textoMeses = totalMeses === 1 ? "1 mes" : `${totalMeses} meses`;
-      const textoDias = dias === 1 ? "1 día" : `${dias} días`;
 
-      if (totalMeses === 0 && dias === 0) {
-        textoResultado = "¡Hoy cumplimos nuestro primer día! 🌻";
-      } else if (totalMeses === 0) {
-        textoResultado = `Llevamos ${textoDias} juntos 💙`;
-      } else if (dias === 0) {
-        textoResultado = `Llevamos exactamente ${textoMeses} juntos 💙`;
-      } else {
-        textoResultado = `Llevamos ${textoMeses} y ${textoDias} juntos 💙`;
+      let anios = fechaActual.getFullYear() - fechaInicio.getFullYear();
+      let meses = fechaActual.getMonth() - fechaInicio.getMonth();
+      let dias = fechaActual.getDate() - fechaInicio.getDate();
+
+      if (dias < 0) {
+        meses--;
+        const ultimoDiaMesAnterior = new Date(fechaActual.getFullYear(), fechaActual.getMonth(), 0).getDate();
+        dias += ultimoDiaMesAnterior;
       }
+
+      if (meses < 0) {
+        anios--;
+        meses += 12;
+      }
+
+      let totalMeses = (anios * 12) + meses;
+      let textoResultado = "";
+
+      if (anios > 0) {
+        const textoAnios = anios === 1 ? "1 año" : `${anios} años`;
+        const textoMeses = meses === 1 ? "1 mes" : `${meses} meses`;
+        const textoDias = dias === 1 ? "1 día" : `${dias} días`;
+
+        if (meses === 0 && dias === 0) textoResultado = `Llevamos exactamente ${textoAnios} ❤️`;
+        else if (meses === 0) textoResultado = `Llevamos ${textoAnios} y ${textoDias} ❤️`;
+        else if (dias === 0) textoResultado = `Llevamos ${textoAnios} y ${textoMeses} ❤️`;
+        else textoResultado = `Llevamos ${textoAnios}, ${textoMeses} y ${textoDias} ❤️`;
+      } else {
+        const textoMeses = totalMeses === 1 ? "1 mes" : `${totalMeses} meses`;
+        const textoDias = dias === 1 ? "1 día" : `${dias} días`;
+
+        if (totalMeses === 0 && dias === 0) textoResultado = "¡Hoy cumplimos nuestro primer día! 🌻";
+        else if (totalMeses === 0) textoResultado = `Llevamos ${textoDias} juntos 💙`;
+        else if (dias === 0) textoResultado = `Llevamos exactamente ${textoMeses} juntos 💙`;
+        else textoResultado = `Llevamos ${textoMeses} y ${textoDias} juntos 💙`;
+      }
+
+      const diferenciaMs = fechaActual - fechaInicio;
+      const totalDias = Math.floor(diferenciaMs / (1000 * 60 * 60 * 24));
+
+      elemTexto.textContent = textoResultado;
+      elemTotal.textContent = `✨ Un total de ${totalDias} días llenos de amor ✨`;
     }
 
-    // Calcular días totales en número
-    const diferenciaMs = fechaActual - fechaInicio;
-    const totalDias = Math.floor(diferenciaMs / (1000 * 60 * 60 * 24));
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", calcularTiempo);
+    } else {
+      calcularTiempo();
+    }
+  })();
+  </script>
 
-    // Mostrar en pantalla
-    document.getElementById('texto-tiempo-juntos').textContent = textoResultado;
-    document.getElementById('c-total-dias').textContent = `✨ Un total de ${totalDias} días llenos de amor ✨`;
-  }
-
-  calcularTiempo();
-});
-</script>
-
+  <!-- SCRIPTS GENERALES -->
   <script>
     const intro = document.getElementById("intro");
     const music = document.getElementById("music");
@@ -1637,7 +1468,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
 
-    /* Partículas de Fondo con Girasoles y Stitch */
+    /* Partículas de Fondo */
     const particles = document.getElementById("particles");
     const symbols = ["🌻", "🌼", "💙", "✨", "✦"];
 
@@ -1668,6 +1499,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 12000);
     }, 1800);
   </script>
+
 </body>
 
 </html>
