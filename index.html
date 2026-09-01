@@ -61,6 +61,14 @@ h1, h2, h3 {
         radial-gradient(circle at 50% 100%, rgba(255, 195, 0, 0.15), transparent 45%);
     }
 
+    .tiempo-destacado {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d97706; /* Color dorado girasol */
+  margin: 10px 0;
+  font-family: 'Dancing Script', cursive !important;
+}
+
     /* =====================================
        INTRO
     ===================================== */
@@ -1317,17 +1325,85 @@ h1, h2, h3 {
       </div>
     </section>
 
-    <!-- Módulo del Contador Amoroso -->
-<div class="contador-container">
-  <h3>Llevamos juntos:</h3>
-  <div class="contador-grid">
-    <div class="contador-box"><span id="c-anios">0</span><label>Años</label></div>
-    <div class="contador-box"><span id="c-meses">0</span><label>Meses</label></div>
-    <div class="contador-box"><span id="c-dias">0</span><label>Días</label></div>
-  </div>
-  <p id="c-total-dias" class="total-dias-texto">Cargando días...</p>
-</div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  function calcularTiempo() {
+    const fechaInicio = new Date("2026-03-26T00:00:00");
+    const fechaActual = new Date();
 
+    if (fechaActual < fechaInicio) {
+      document.getElementById('texto-tiempo-juntos').textContent = "Nuestra historia comienza hoy 🌻";
+      return;
+    }
+
+    let anios = fechaActual.getFullYear() - fechaInicio.getFullYear();
+    let meses = fechaActual.getMonth() - fechaInicio.getMonth();
+    let dias = fechaActual.getDate() - fechaInicio.getDate();
+
+    // Ajuste si los días son negativos
+    if (dias < 0) {
+      meses--;
+      const ultimoDiaMesAnterior = new Date(fechaActual.getFullYear(), fechaActual.getMonth(), 0).getDate();
+      dias += ultimoDiaMesAnterior;
+    }
+
+    // Ajuste si los meses son negativos
+    if (meses < 0) {
+      anios--;
+      meses += 12;
+    }
+
+    // Convertir todo a meses totales si aún no se cumple el primer año, o sumar meses acumulados
+    let totalMeses = (anios * 12) + meses;
+    
+    // Construcción de la frase natural
+    let textoResultado = "";
+
+    // Si ya pasó un año o más
+    if (anios > 0) {
+      const textoAnios = anios === 1 ? "1 año" : `${anios} años`;
+      const textoMeses = meses === 1 ? "1 mes" : `${meses} meses`;
+      const textoDias = dias === 1 ? "1 día" : `${dias} días`;
+
+      if (meses === 0 && dias === 0) {
+        textoResultado = `Llevamos exactamente ${textoAnios} ❤️`;
+      } else if (meses === 0) {
+        textoResultado = `Llevamos ${textoAnios} y ${textoDias} ❤️`;
+      } else if (dias === 0) {
+        textoResultado = `Llevamos ${textoAnios} y ${textoMeses} ❤️`;
+      } else {
+        textoResultado = `Llevamos ${textoAnios}, ${textoMeses} y ${textoDias} ❤️`;
+      }
+    } 
+    // Si llevamos menos de un año (solo meses y días)
+    else {
+      const textoMeses = totalMeses === 1 ? "1 mes" : `${totalMeses} meses`;
+      const textoDias = dias === 1 ? "1 día" : `${dias} días`;
+
+      if (totalMeses === 0 && dias === 0) {
+        textoResultado = "¡Hoy cumplimos nuestro primer día! 🌻";
+      } else if (totalMeses === 0) {
+        textoResultado = `Llevamos ${textoDias} juntos 💙`;
+      } else if (dias === 0) {
+        textoResultado = `Llevamos exactamente ${textoMeses} juntos 💙`;
+      } else {
+        textoResultado = `Llevamos ${textoMeses} y ${textoDias} juntos 💙`;
+      }
+    }
+
+    // Calcular días totales en número
+    const diferenciaMs = fechaActual - fechaInicio;
+    const totalDias = Math.floor(diferenciaMs / (1000 * 60 * 60 * 24));
+
+    // Mostrar en pantalla
+    document.getElementById('texto-tiempo-juntos').textContent = textoResultado;
+    document.getElementById('c-total-dias').textContent = `✨ Un total de ${totalDias} días llenos de amor ✨`;
+  }
+
+  calcularTiempo();
+});
+</script>
+    
     <section class="toast-section">
       <div class="toast-container">
         <div class="section-title">
